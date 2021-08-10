@@ -1,0 +1,124 @@
+@import "../../global.scss";
+
+.works {
+  background-color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  .arrow {
+    height: 5em;
+    z-index: 1;
+    position: absolute;
+
+    @include mobile {
+      display: none;
+    }
+
+    &.left {
+      left: 100px;
+      transform: rotateY(180deg);
+      cursor: pointer;
+    }
+
+    &.right {
+      right: 100px;
+      cursor: pointer;
+    }
+  }
+
+  .slider {
+    height: 30em;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease-out;
+
+    @include mobile {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .item {
+        width: 60rem;
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+          width: 90%;
+          height: 10em;
+          margin: 1em 0;
+        }
+        .left {
+          flex: 4;
+          background-color: lightseagreen;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .left-container {
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .img-container {
+              width: 5em;
+              height: 5em;
+              border-radius: 50%;
+              background-color: lightpink;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              img {
+                width: 2em;
+              }
+            }
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+            span {
+              font-size: 0.8rem;
+              font-weight: 800;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .right {
+          flex: 8;
+          background-color: white;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          img {
+            width: 30em;
+            transform: rotate(-10deg);
+          }
+        }
+      }
+    }
+  }
+}
