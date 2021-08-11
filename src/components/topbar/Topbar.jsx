@@ -8,7 +8,7 @@ const topbar = ({ menuValue, setMenu }) => {
       <div className="wrapper">
         <div className="left">
           <a href="#works" className="logo">
-            br1an.
+            Brian.
           </a>
           <div className="item-container">
             <Person className="icon" />

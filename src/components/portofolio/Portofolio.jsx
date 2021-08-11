@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./portofolio.scss";
 import PortofolioList from "../portofolioList/PortofolioList";
-import { sunnyside, mobilePortfolio } from "../../data";
+import { sunnyside, restomenu, mobilePortfolio } from "../../data";
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("sunnyside");
@@ -20,7 +20,7 @@ const Portofolio = () => {
     },
     {
       id: "restomenu",
-      title: "Restaurant Menu",
+      title: "Jolibee Favorites",
       link: "google.com",
     },
     {
@@ -46,7 +46,7 @@ const Portofolio = () => {
         setData(sunnyside);
         break;
       case "restomenu":
-        setData(mobilePortfolio);
+        setData(restomenu);
         break;
       case "pomodoro":
         setData(sunnyside);
