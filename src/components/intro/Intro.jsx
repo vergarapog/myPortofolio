@@ -11,20 +11,14 @@ const Intro = () => {
       showCursor: false,
       backDelay: 1000,
       showCursor: true,
-      strings: [
-        "Aspiring",
-        "Ambitious",
-        "Enthusiastic",
-        "Motivated",
-        "Commited",
-      ],
+      strings: ["Aspiring", "Ambitious", "Motivated", "Commited"],
     });
   }, []);
   return (
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src="assets/frontendpng.png" alt="" />
+          <img src="assets/frontend.png" alt="" />
         </div>
       </div>
       <div className="right">
@@ -34,8 +28,19 @@ const Intro = () => {
           <h3>
             <span ref={textRef}></span> Front-End Engineer
           </h3>
+          <div className="resume-wrapper">
+            <div>
+              <a href="">Formal Resume</a>
+            </div>
+            <div>
+              <a className="creative" href="">
+                Creative Resume
+              </a>
+            </div>
+          </div>
         </div>
-        <a href="#portofolio">
+
+        <a className="bottom" href="#portofolio">
           <img src="assets/down.png" alt="" />
         </a>
       </div>

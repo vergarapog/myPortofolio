@@ -2,11 +2,11 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./portofolio.scss";
 import PortofolioList from "../portofolioList/PortofolioList";
-import { webPortfolio, mobilePortfolio } from "../../data";
+import { sunnyside, mobilePortfolio } from "../../data";
 
 const Portofolio = () => {
-  const [selected, setSelected] = useState("featured");
-  const [data, setData] = useState(webPortfolio);
+  const [selected, setSelected] = useState("sunnyside");
+  const [data, setData] = useState(sunnyside);
 
   const handleClick = (id) => {
     setSelected(id);
@@ -14,26 +14,52 @@ const Portofolio = () => {
 
   const list = [
     {
-      id: "web",
-      title: "Web Applications",
+      id: "sunnyside",
+      title: "Sunnyside Landing Page",
+      link: "youtube.com",
     },
     {
-      id: "mobile",
-      title: "Mobile Responsive View",
+      id: "restomenu",
+      title: "Restaurant Menu",
+      link: "google.com",
+    },
+    {
+      id: "pomodoro",
+      title: "Pomodoro Web App",
+      link: "",
+    },
+    {
+      id: "todo",
+      title: "To-do App",
+      link: "",
+    },
+    {
+      id: "lorem",
+      title: "Lorem Ipsum Generator",
+      link: "",
     },
   ];
 
   useEffect(() => {
     switch (selected) {
-      case "web":
-        setData(webPortfolio);
+      case "sunnyside":
+        setData(sunnyside);
         break;
-      case "mobile":
+      case "restomenu":
         setData(mobilePortfolio);
+        break;
+      case "pomodoro":
+        setData(sunnyside);
+        break;
+      case "todo":
+        setData(mobilePortfolio);
+        break;
+      case "lorem":
+        setData(sunnyside);
         break;
 
       default:
-        setData(webPortfolio);
+        setData(sunnyside);
     }
   }, [selected]);
 

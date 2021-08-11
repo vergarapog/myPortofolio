@@ -8,7 +8,7 @@ li {
   cursor: pointer;
 
   @include mobile {
-    margin-right: 1em;
+    margin: 0em;
   }
 
   &.active {

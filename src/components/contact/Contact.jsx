@@ -1,12 +1,31 @@
 import { useState } from "react";
 import "./contact.scss";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [message, setMessage] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage(true);
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_ummtl6k",
+        e.target,
+        "user_Qo0WHk53vZvhlnybCaXUy"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
+
+  function sendEmail(e) {}
+
   return (
     <div className="contact" id="contact">
       <div className="left">
@@ -15,8 +34,8 @@ const Contact = () => {
       <div className="right">
         <h2>Contact.</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" name="" id="" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
+          <input type="email" name="email" id="" placeholder="Email" />
+          <textarea placeholder="Message" name="message"></textarea>
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>

@@ -8,11 +8,11 @@ const topbar = ({ menuValue, setMenu }) => {
       <div className="wrapper">
         <div className="left">
           <a href="#works" className="logo">
-            hotdog.
+            br1an.
           </a>
           <div className="item-container">
             <Person className="icon" />
-            <span>917-499-0930</span>
+            <span>976-105-0239</span>
           </div>
           <div className="item-container">
             <Mail className="icon" />
