@@ -92,8 +92,12 @@ const Portofolio = () => {
       </ul>
       __________________________________________
       <div className="link-containers">
-        <a href={activeLink}>{btnData}'s website</a>
-        <a href={githubLink}>{btnData}'s code</a>
+        <a href={activeLink} target="_blank">
+          {btnData}'s website
+        </a>
+        <a href={githubLink} target="_blank">
+          {btnData}'s code
+        </a>
       </div>
       <div className="container">
         {data.map((item) => {
