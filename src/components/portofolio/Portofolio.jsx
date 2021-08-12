@@ -13,6 +13,7 @@ const Portofolio = () => {
   const [githubLink, setGithubLink] = useState(
     "https://github.com/vergarapog/sunnyside-challenge"
   );
+  const [btnData, setBtnData] = useState("Sunnyside");
 
   const handleClick = (id) => {
     setSelected(id);
@@ -42,17 +43,21 @@ const Portofolio = () => {
         setData(sunnyside);
         setActiveLink("https://sunnysideinc.netlify.app/");
         setGithubLink("https://github.com/vergarapog/sunnyside-challenge");
+        setBtnData("Sunnyside");
 
         break;
       case "restomenu":
         setData(restomenu);
         setActiveLink("https://jabeefavs.netlify.app/");
         setGithubLink("https://github.com/vergarapog/RestaurantMenu-ReactJS");
+        setBtnData("Jolibee fav");
+
         break;
       case "pomodoro":
         setData(pomodoro);
         setActiveLink("https://pomodoro-todo.netlify.app/");
         setGithubLink("https://github.com/vergarapog/pomo-todo");
+        setBtnData("Pomodoro");
 
         break;
 
@@ -87,8 +92,8 @@ const Portofolio = () => {
       </ul>
       __________________________________________
       <div className="link-containers">
-        <a href={activeLink}>Live website</a>
-        <a href={githubLink}>Website's Code</a>
+        <a href={activeLink}>{btnData}'s website</a>
+        <a href={githubLink}>{btnData}'s code</a>
       </div>
       <div className="container">
         {data.map((item) => {

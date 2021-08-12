@@ -33,7 +33,10 @@ const Intro = () => {
               <a href="https://github.com/vergarapog">My Github</a>
             </div>
             <div>
-              <a className="creative" href="">
+              <a
+                className="creative"
+                href="https://drive.google.com/file/d/1ALuBvXSNvXqmq_M8QAcquCq1k4veak7Y/view?usp=sharing"
+              >
                 My Resume
               </a>
             </div>

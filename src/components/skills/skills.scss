@@ -25,6 +25,10 @@
       }
       p {
         font-size: 1.3rem;
+        width: 60%;
+        @include mobile {
+          width: 100%;
+        }
       }
     }
     h2 {
