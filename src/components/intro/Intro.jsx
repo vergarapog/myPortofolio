@@ -30,11 +30,11 @@ const Intro = () => {
           </h3>
           <div className="resume-wrapper">
             <div>
-              <a href="">Formal Resume</a>
+              <a href="https://github.com/vergarapog">My Github</a>
             </div>
             <div>
               <a className="creative" href="">
-                Creative Resume
+                My Resume
               </a>
             </div>
           </div>

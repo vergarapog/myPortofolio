@@ -27,6 +27,30 @@
     }
   }
 
+  .link-containers {
+    display: flex;
+    @include mobile {
+      margin: 10px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    a {
+      margin: 1em 0.5em;
+      width: 10em;
+      height: 2.5em;
+      font-size: 1.1rem;
+      letter-spacing: 0.4px;
+      font-weight: 600;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      background-color: #afe2e5;
+      color: black;
+    }
+  }
+
   .container {
     width: 70%;
     display: flex;

@@ -2,11 +2,17 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./portofolio.scss";
 import PortofolioList from "../portofolioList/PortofolioList";
-import { sunnyside, restomenu, mobilePortfolio } from "../../data";
+import { sunnyside, restomenu, pomodoro } from "../../data";
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("sunnyside");
   const [data, setData] = useState(sunnyside);
+  const [activeLink, setActiveLink] = useState(
+    "https://sunnysideinc.netlify.app/"
+  );
+  const [githubLink, setGithubLink] = useState(
+    "https://github.com/vergarapog/sunnyside-challenge"
+  );
 
   const handleClick = (id) => {
     setSelected(id);
@@ -28,34 +34,26 @@ const Portofolio = () => {
       title: "Pomodoro Web App",
       link: "",
     },
-    {
-      id: "todo",
-      title: "To-do App",
-      link: "",
-    },
-    {
-      id: "lorem",
-      title: "Lorem Ipsum Generator",
-      link: "",
-    },
   ];
 
   useEffect(() => {
     switch (selected) {
       case "sunnyside":
         setData(sunnyside);
+        setActiveLink("https://sunnysideinc.netlify.app/");
+        setGithubLink("https://github.com/vergarapog/sunnyside-challenge");
+
         break;
       case "restomenu":
         setData(restomenu);
+        setActiveLink("https://jabeefavs.netlify.app/");
+        setGithubLink("https://github.com/vergarapog/RestaurantMenu-ReactJS");
         break;
       case "pomodoro":
-        setData(sunnyside);
-        break;
-      case "todo":
-        setData(mobilePortfolio);
-        break;
-      case "lorem":
-        setData(sunnyside);
+        setData(pomodoro);
+        setActiveLink("https://pomodoro-todo.netlify.app/");
+        setGithubLink("https://github.com/vergarapog/pomo-todo");
+
         break;
 
       default:
@@ -65,7 +63,7 @@ const Portofolio = () => {
 
   return (
     <div className="portofolio" id="portofolio">
-      <h1>Portofolio</h1>
+      <h1>Portfolio</h1>
       <ul>
         {list.map((item) => {
           if (item.id === selected) {
@@ -87,12 +85,19 @@ const Portofolio = () => {
           );
         })}
       </ul>
+      __________________________________________
+      <div className="link-containers">
+        <a href={activeLink}>Live website</a>
+        <a href={githubLink}>Website's Code</a>
+      </div>
       <div className="container">
         {data.map((item) => {
           return (
-            <div className="item" key={item.id}>
-              <img src={item.img} alt="" />
-              <h3>{item.title}</h3>
+            <div>
+              <div className="item" key={item.id}>
+                <img src={item.img} alt="" />
+                <h3>{item.title}</h3>
+              </div>
             </div>
           );
         })}
