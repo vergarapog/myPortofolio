@@ -37,7 +37,7 @@ const Intro = () => {
             <div>
               <a
                 className="creative"
-                href="https://drive.google.com/file/d/1ALuBvXSNvXqmq_M8QAcquCq1k4veak7Y/view?usp=sharing"
+                href="https://drive.google.com/file/d/1zLueu5hHmAMwzw0aDiRSBPLtNHEit6Qb/view?usp=sharing"
                 target="_blank"
               >
                 My Resume
