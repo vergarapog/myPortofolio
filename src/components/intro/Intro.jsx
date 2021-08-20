@@ -2,9 +2,12 @@ import React from "react";
 import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
+import lottie from "lottie-web";
+import { SvgIcon } from "@material-ui/core";
 
 const Intro = () => {
   const textRef = useRef();
+  const container = useRef(null);
 
   useEffect(() => {
     init(textRef.current, {
@@ -14,11 +17,22 @@ const Intro = () => {
       strings: ["Aspiring", "Ambitious", "Motivated", "Commited"],
     });
   }, []);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../lottieanimations/intro.json"),
+    });
+  }, []);
   return (
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src="assets/frontend.png" alt="" />
+          {/* <img src="assets/frontend.png" alt="" /> */}
+          <div className="container" ref={container}></div>
         </div>
       </div>
       <div className="right">
