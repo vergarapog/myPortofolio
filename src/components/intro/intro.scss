@@ -104,6 +104,10 @@
         display: flex;
         flex-direction: row;
 
+        .link-container {
+          overflow: hidden;
+        }
+
         a {
           margin: 1em 0.5em;
           width: 10em;

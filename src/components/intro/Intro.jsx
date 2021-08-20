@@ -5,10 +5,20 @@ import { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import { SvgIcon } from "@material-ui/core";
 
+import { gsap, Power3 } from "gsap";
+
 const Intro = () => {
   const textRef = useRef();
   const container = useRef(null);
 
+  let button = useRef();
+  let button2 = useRef();
+
+  let titleRef = useRef();
+  let nameRef = useRef();
+  let jobRef = useRef();
+
+  console.log(container);
   useEffect(() => {
     init(textRef.current, {
       showCursor: false,
@@ -26,6 +36,86 @@ const Intro = () => {
       autoplay: true,
       animationData: require("../lottieanimations/intro.json"),
     });
+    gsap.fromTo(
+      container.current,
+      {
+        opacity: 0,
+      },
+      {
+        duration: 2,
+        opacity: 1,
+        ease: Power3.easeInOut,
+      }
+    );
+    gsap.fromTo(
+      titleRef.current,
+      {
+        opacity: 0,
+        y: -150,
+      },
+      {
+        duration: 2,
+        opacity: 1,
+        y: 0,
+        ease: Power3.easeInOut,
+      }
+    );
+    gsap.fromTo(
+      nameRef.current,
+      {
+        opacity: 0,
+        x: 150,
+      },
+      {
+        duration: 2,
+        opacity: 1,
+        x: 0,
+        ease: Power3.easeInOut,
+      }
+    );
+    gsap.fromTo(
+      jobRef.current,
+      {
+        opacity: 0,
+      },
+      {
+        duration: 2,
+        opacity: 1,
+        ease: Power3.easeInOut,
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      button.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        duration: 2,
+        opacity: 1,
+        y: 0,
+        ease: Power3.easeInOut,
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      button2.current,
+      {
+        opacity: 0,
+        y: 60,
+      },
+      {
+        duration: 2,
+        opacity: 1,
+        y: 0,
+        ease: Power3.easeInOut,
+      }
+    );
   }, []);
   return (
     <div className="intro" id="intro">
@@ -37,22 +127,27 @@ const Intro = () => {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2>Hi There, I'm</h2>
-          <h1>Brian Vergara</h1>
-          <h3>
+          <h2 ref={titleRef}>Hi There, I'm</h2>
+          <h1 ref={nameRef}>Brian Vergara</h1>
+          <h3 ref={jobRef}>
             <span ref={textRef}></span> Front-End Engineer
           </h3>
           <div className="resume-wrapper">
-            <div>
-              <a href="https://github.com/vergarapog" target="_blank">
+            <div className="link-container">
+              <a
+                href="https://github.com/vergarapog"
+                target="_blank"
+                ref={button}
+              >
                 My Github
               </a>
             </div>
-            <div>
+            <div className="link-container">
               <a
                 className="creative"
                 href="https://drive.google.com/file/d/1zLueu5hHmAMwzw0aDiRSBPLtNHEit6Qb/view?usp=sharing"
                 target="_blank"
+                ref={button2}
               >
                 My Resume
               </a>
