@@ -15,6 +15,8 @@
     // z-index: 50;
 
     .imgContainer {
+      opacity: 0;
+
       width: 55em;
       height: 55em;
       // width: 120%;
@@ -27,6 +29,8 @@
       float: right;
 
       .container {
+        opacity: 0;
+
         height: 100%;
         overflow: hidden;
         @include mobile {
@@ -64,6 +68,7 @@
       }
 
       h2 {
+        opacity: 0;
         padding-top: 1.3em;
         font-size: 2.3rem;
         @include mobile {
@@ -71,6 +76,8 @@
         }
       }
       h1 {
+        opacity: 0;
+
         font-size: 3.5rem;
         margin: 0.5em 0;
         @include mobile {
@@ -78,6 +85,8 @@
         }
       }
       h3 {
+        opacity: 0;
+
         font-size: 2rem;
         @include mobile {
           font-size: 1.3rem;
@@ -109,6 +118,8 @@
         }
 
         a {
+          opacity: 0;
+
           margin: 1em 0.5em;
           width: 10em;
           height: 2.5em;
@@ -124,6 +135,8 @@
           text-decoration: none;
 
           &.creative {
+            opacity: 0;
+
             background-color: #e2832e;
             color: white;
           }
