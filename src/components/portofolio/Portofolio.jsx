@@ -1,8 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./portofolio.scss";
 import PortofolioList from "../portofolioList/PortofolioList";
 import { sunnyside, restomenu, pomodoro } from "../../data";
+import { gsap, Power3 } from "gsap";
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("sunnyside");
@@ -18,6 +19,38 @@ const Portofolio = () => {
   const handleClick = (id) => {
     setSelected(id);
   };
+
+  let refBtns = useRef();
+  let refPics = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      refPics.current,
+      {
+        autoAlpha: 0,
+        y: 30,
+      },
+      {
+        duration: 1,
+        autoAlpha: 1,
+        y: 0,
+        ease: Power3.easeInOut,
+      }
+    );
+    gsap.fromTo(
+      refBtns.current,
+      {
+        autoAlpha: 0,
+        y: 30,
+      },
+      {
+        duration: 0.7,
+        autoAlpha: 1,
+        y: 0,
+        ease: Power3.easeInOut,
+      }
+    );
+  }, [selected]);
 
   const list = [
     {
@@ -91,7 +124,7 @@ const Portofolio = () => {
         })}
       </ul>
       __________________________________________
-      <div className="link-containers">
+      <div className="link-containers" ref={refBtns}>
         <a href={activeLink} target="_blank">
           {btnData}'s website
         </a>
@@ -99,7 +132,7 @@ const Portofolio = () => {
           {btnData}'s code
         </a>
       </div>
-      <div className="container">
+      <div className="container" ref={refPics}>
         {data.map((item) => {
           return (
             <div>

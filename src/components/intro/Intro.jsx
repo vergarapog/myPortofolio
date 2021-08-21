@@ -14,6 +14,7 @@ const Intro = () => {
   let button = useRef();
   let button2 = useRef();
 
+  let circle = useRef();
   let titleRef = useRef();
   let nameRef = useRef();
   let jobRef = useRef();
@@ -39,23 +40,23 @@ const Intro = () => {
     gsap.fromTo(
       container.current,
       {
-        opacity: 0,
+        autoAlpha: 0,
       },
       {
         duration: 2,
-        opacity: 1,
+        autoAlpha: 1,
         ease: Power3.easeInOut,
       }
     );
     gsap.fromTo(
       titleRef.current,
       {
-        opacity: 0,
+        autoAlpha: 0,
         y: -150,
       },
       {
         duration: 2,
-        opacity: 1,
+        autoAlpha: 1,
         y: 0,
         ease: Power3.easeInOut,
       }
@@ -63,12 +64,12 @@ const Intro = () => {
     gsap.fromTo(
       nameRef.current,
       {
-        opacity: 0,
+        autoAlpha: 0,
         x: 150,
       },
       {
         duration: 2,
-        opacity: 1,
+        autoAlpha: 1,
         x: 0,
         ease: Power3.easeInOut,
       }
@@ -76,11 +77,25 @@ const Intro = () => {
     gsap.fromTo(
       jobRef.current,
       {
-        opacity: 0,
+        autoAlpha: 0,
       },
       {
         duration: 2,
-        opacity: 1,
+        autoAlpha: 1,
+        ease: Power3.easeInOut,
+      }
+    );
+    gsap.fromTo(
+      circle.current,
+      {
+        autoAlpha: 0,
+        y: 50,
+      },
+      {
+        duration: 2,
+        autoAlpha: 1,
+        y: 0,
+
         ease: Power3.easeInOut,
       }
     );
@@ -90,12 +105,12 @@ const Intro = () => {
     gsap.fromTo(
       button.current,
       {
-        opacity: 0,
+        autoAlpha: 0,
         y: 30,
       },
       {
         duration: 2,
-        opacity: 1,
+        autoAlpha: 1,
         y: 0,
         ease: Power3.easeInOut,
       }
@@ -106,12 +121,12 @@ const Intro = () => {
     gsap.fromTo(
       button2.current,
       {
-        opacity: 0,
+        autoAlpha: 0,
         y: 60,
       },
       {
         duration: 2,
-        opacity: 1,
+        autoAlpha: 1,
         y: 0,
         ease: Power3.easeInOut,
       }
@@ -120,7 +135,7 @@ const Intro = () => {
   return (
     <div className="intro" id="intro">
       <div className="left">
-        <div className="imgContainer">
+        <div className="imgContainer" ref={circle}>
           {/* <img src="assets/frontend.png" alt="" /> */}
           <div className="container" ref={container}></div>
         </div>
