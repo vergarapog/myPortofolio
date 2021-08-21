@@ -17,6 +17,11 @@ const menu = ({ menuValue, setMenu }) => {
         <li onClick={() => setMenu(!menuValue)}>
           <a href="#contact">Contact</a>
         </li>
+        <li onClick={() => setMenu(!menuValue)}>
+          <a href="https://github.com/vergarapog/myPortofolio" target="_blank">
+            My Website's Code
+          </a>
+        </li>
       </ul>
     </div>
   );
