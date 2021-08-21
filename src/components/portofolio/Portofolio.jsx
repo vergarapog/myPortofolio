@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState, useRef } from "react";
 import "./portofolio.scss";
 import PortofolioList from "../portofolioList/PortofolioList";
-import { sunnyside, restomenu, pomodoro } from "../../data";
+import { sunnyside, restomenu, pomodoro, agency } from "../../data";
 import { gsap, Power3 } from "gsap";
 
 const Portofolio = () => {
@@ -59,6 +59,11 @@ const Portofolio = () => {
       link: "youtube.com",
     },
     {
+      id: "agency",
+      title: "Theoretical Client Site",
+      link: "",
+    },
+    {
       id: "restomenu",
       title: "Jolibee Favorites",
       link: "google.com",
@@ -77,6 +82,13 @@ const Portofolio = () => {
         setActiveLink("https://sunnysideinc.netlify.app/");
         setGithubLink("https://github.com/vergarapog/sunnyside-challenge");
         setBtnData("Sunnyside");
+
+        break;
+      case "agency":
+        setData(agency);
+        setActiveLink("https://agency1234.netlify.app/");
+        setGithubLink("https://github.com/vergarapog/client-website-concept");
+        setBtnData("Agency");
 
         break;
       case "restomenu":

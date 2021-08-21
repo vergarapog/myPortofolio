@@ -71,3 +71,36 @@ export const pomodoro = [
     img: "/assets/projects/pomodoro/pomodoro-3.jpg",
   },
 ];
+
+export const agency = [
+  {
+    id: 1,
+    title: "Theoretical Client Website",
+    img: "/assets/projects/agency123/agency1.jpg",
+  },
+  {
+    id: 2,
+    title: "Featured Section",
+    img: "/assets/projects/agency123/agency2.jpg",
+  },
+  {
+    id: 3,
+    title: "Process Section",
+    img: "/assets/projects/agency123/agency3.jpg",
+  },
+  {
+    id: 4,
+    title: "Prices Section",
+    img: "/assets/projects/agency123/agency4.jpg",
+  },
+  {
+    id: 5,
+    title: "Contact Section",
+    img: "/assets/projects/agency123/agency5.jpg",
+  },
+  {
+    id: 6,
+    title: "Agency Mobile view",
+    img: "/assets/projects/agency123/agency6.jpg",
+  },
+];
