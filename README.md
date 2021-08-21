@@ -2,9 +2,7 @@
 
 My Portofolio Website made with reactJS, SASS.
 
-[Live Site](https://jabeefavs.netlify.app/)
-
-[View my Portofolio](https://brianvergara.netlify.app/)
+[View my Live Site (https://brianvergara.netlify.app/)
 
 React Skills used in this app
 - React state w/ useState()
