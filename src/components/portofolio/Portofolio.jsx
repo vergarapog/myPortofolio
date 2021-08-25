@@ -31,7 +31,7 @@ const Portofolio = () => {
         y: 30,
       },
       {
-        duration: 1,
+        duration: 2,
         autoAlpha: 1,
         y: 0,
         ease: Power3.easeInOut,
