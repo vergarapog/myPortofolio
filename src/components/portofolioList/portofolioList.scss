@@ -7,12 +7,19 @@ li {
   border-radius: 0.5em;
   cursor: pointer;
 
+  transition: all 0.3s ease;
+
   @include mobile {
     margin: 0em;
   }
 
   &.active {
     background-color: $mainColor;
+    color: white;
+  }
+
+  &:hover {
+    background-color: crimson;
     color: white;
   }
 }
