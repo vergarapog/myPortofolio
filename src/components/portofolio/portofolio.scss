@@ -29,11 +29,12 @@
 
   .link-containers {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: $mainColor;
     margin: 1em;
-    width: 50%;
+    width: 35%;
     border-radius: 25px;
+    text-align: center;
 
     @include mobile {
       width: 80%;
