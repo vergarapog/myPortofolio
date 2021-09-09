@@ -1,33 +1,33 @@
-import React from "react";
-import "./intro.scss";
-import { init } from "ityped";
-import { useEffect, useRef } from "react";
-import lottie from "lottie-web";
-import { SvgIcon } from "@material-ui/core";
+import React from "react"
+import "./intro.scss"
+import { init } from "ityped"
+import { useEffect, useRef } from "react"
+import lottie from "lottie-web"
+import { SvgIcon } from "@material-ui/core"
 
-import { gsap, Power3 } from "gsap";
+import { gsap, Power3 } from "gsap"
 
 const Intro = () => {
-  const textRef = useRef();
-  const container = useRef(null);
+  const textRef = useRef()
+  const container = useRef(null)
 
-  let button = useRef();
-  let button2 = useRef();
+  let button = useRef()
+  let button2 = useRef()
 
-  let circle = useRef();
-  let titleRef = useRef();
-  let nameRef = useRef();
-  let jobRef = useRef();
+  let circle = useRef()
+  let titleRef = useRef()
+  let nameRef = useRef()
+  let jobRef = useRef()
 
-  console.log(container);
+  console.log(container)
   useEffect(() => {
     init(textRef.current, {
       showCursor: false,
       backDelay: 1000,
       showCursor: true,
       strings: ["Aspiring", "Ambitious", "Motivated", "Commited"],
-    });
-  }, []);
+    })
+  }, [])
 
   useEffect(() => {
     lottie.loadAnimation({
@@ -36,7 +36,7 @@ const Intro = () => {
       loop: true,
       autoplay: true,
       animationData: require("../lottieanimations/intro.json"),
-    });
+    })
     gsap.fromTo(
       container.current,
       {
@@ -47,7 +47,7 @@ const Intro = () => {
         autoAlpha: 1,
         ease: Power3.easeInOut,
       }
-    );
+    )
     gsap.fromTo(
       titleRef.current,
       {
@@ -60,7 +60,7 @@ const Intro = () => {
         y: 0,
         ease: Power3.easeInOut,
       }
-    );
+    )
     gsap.fromTo(
       nameRef.current,
       {
@@ -73,7 +73,7 @@ const Intro = () => {
         x: 0,
         ease: Power3.easeInOut,
       }
-    );
+    )
     gsap.fromTo(
       jobRef.current,
       {
@@ -84,22 +84,24 @@ const Intro = () => {
         autoAlpha: 1,
         ease: Power3.easeInOut,
       }
-    );
+    )
     gsap.fromTo(
       circle.current,
       {
         autoAlpha: 0,
+        scale: 0,
         y: 50,
       },
       {
         duration: 2,
         autoAlpha: 1,
+        scale: 1,
         y: 0,
-
+        delay: 1,
         ease: Power3.easeInOut,
       }
-    );
-  }, []);
+    )
+  }, [])
 
   useEffect(() => {
     gsap.fromTo(
@@ -114,8 +116,8 @@ const Intro = () => {
         y: 0,
         ease: Power3.easeInOut,
       }
-    );
-  }, []);
+    )
+  }, [])
 
   useEffect(() => {
     gsap.fromTo(
@@ -130,8 +132,8 @@ const Intro = () => {
         y: 0,
         ease: Power3.easeInOut,
       }
-    );
-  }, []);
+    )
+  }, [])
   return (
     <div className="intro" id="intro">
       <div className="left">
@@ -175,7 +177,7 @@ const Intro = () => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro

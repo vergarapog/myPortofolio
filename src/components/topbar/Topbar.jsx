@@ -1,11 +1,25 @@
-import React from "react";
-import "./topbar.scss";
-import { Person, Mail } from "@material-ui/icons";
+import React from "react"
+import { useEffect, useRef } from "react"
+import "./topbar.scss"
+import { Person, Mail } from "@material-ui/icons"
+import { gsap } from "gsap"
 
-const topbar = ({ menuValue, setMenu }) => {
+const Topbar = ({ menuValue, setMenu }) => {
+  const topbarRef = useRef()
+
+  useEffect(() => {
+    gsap.from(topbarRef.current, {
+      duration: 1,
+      y: "-100%",
+      ease: "bounce",
+      delay: 3,
+      opacity: 0,
+    })
+  }, [])
+
   return (
     <div className={"topbar " + (menuValue && "active")}>
-      <div className="wrapper">
+      <div className="wrapper" ref={topbarRef}>
         <div className="left">
           <a href="#works" className="logo">
             Brian.
@@ -28,7 +42,7 @@ const topbar = ({ menuValue, setMenu }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default topbar;
+export default Topbar
