@@ -3,7 +3,7 @@
 li {
   font-size: 1.1rem;
   margin-right: 2em;
-  padding: 0.5em;
+  padding: 1em;
   border-radius: 0.5em;
   cursor: pointer;
   text-align: center;
@@ -15,12 +15,12 @@ li {
   }
 
   &.active {
-    background-color: $mainColor;
+    background-color: black;
     color: white;
   }
 
   &:hover {
-    background-color: $mainColor;
+    background-color: black;
     color: white;
   }
 }

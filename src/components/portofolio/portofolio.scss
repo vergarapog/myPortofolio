@@ -1,17 +1,73 @@
 @import "../../global.scss";
 
 .portofolio {
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3em 0;
 
-  h1 {
-    font-size: 3em;
-    @include mobile {
-      font-size: 2.2rem;
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow-y: hidden;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    margin: 1.75em;
+
+    width: 90%;
+
+    padding: 1em;
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      @include mobile {
+        font-size: 2.2rem;
+      }
     }
+  }
+
+  .moving-glow::before,
+  .moving-glow::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(
+      45deg,
+      #fb0094,
+      #0000ff,
+      #ff0000,
+      #0000ff,
+      #ff0000
+    );
+    background-size: 400%;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    z-index: -1;
+    animation: anim-moving-glow 20s ease-in-out infinite;
+  }
+
+  @keyframes anim-moving-glow {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  .moving-glow:after {
+    filter: blur(30px);
   }
 
   ul {
@@ -31,7 +87,7 @@
     display: flex;
     justify-content: space-evenly;
     // background-color: $mainColor;
-    margin: 1em;
+    margin-bottom: 1em;
     width: 35%;
     border-radius: 25px;
     text-align: center;

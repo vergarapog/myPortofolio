@@ -113,29 +113,33 @@ const Portofolio = () => {
 
   return (
     <div className="portofolio" id="portofolio">
-      <h1>Portfolio</h1>
-      <ul>
-        {list.map((item) => {
-          if (item.id === selected) {
-            return (
-              <PortofolioList
-                id={item.id}
-                title={item.title}
-                isActive="active"
-                handleClick={handleClick}
-              />
-            )
-          }
-          return (
-            <PortofolioList
-              id={item.id}
-              title={item.title}
-              handleClick={handleClick}
-            />
-          )
-        })}
-      </ul>
-      __________________________________________
+      <div className="box moving-glow">
+        <h1>Portfolio</h1>
+        <div className="border-wrapper">
+          <ul>
+            {list.map((item) => {
+              if (item.id === selected) {
+                return (
+                  <PortofolioList
+                    id={item.id}
+                    title={item.title}
+                    isActive="active"
+                    handleClick={handleClick}
+                  />
+                )
+              }
+              return (
+                <PortofolioList
+                  id={item.id}
+                  title={item.title}
+                  handleClick={handleClick}
+                />
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+
       <div className="link-containers" ref={refBtns}>
         <a href={activeLink} target="_blank">
           {btnData}'s website
