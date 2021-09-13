@@ -113,8 +113,8 @@ const Portofolio = () => {
 
   return (
     <div className="portofolio" id="portofolio">
+      <h1 className="gradient-text">Portfolio</h1>
       <div className="box moving-glow">
-        <h1>Portfolio</h1>
         <div className="border-wrapper">
           <ul>
             {list.map((item) => {
