@@ -90,12 +90,14 @@ const Intro = () => {
       {
         autoAlpha: 0,
         scale: 0,
+        rotate: 180,
         y: 50,
       },
       {
         duration: 2,
         autoAlpha: 1,
         scale: 1,
+        rotate: 0,
         y: 0,
         delay: 1,
         ease: Power3.easeInOut,
