@@ -36,7 +36,11 @@
     letter-spacing: 0.04em;
     margin: 1.75em;
 
-    width: 70%;
+    width: max-content;
+
+    @include mobile {
+      width: 85%;
+    }
 
     padding: 0em;
     border-radius: 20px;
