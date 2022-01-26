@@ -1,5 +1,5 @@
-import React from "react";
-import "./portofolioList.scss";
+import React from "react"
+import "./portofolioList.scss"
 
 const PortofolioList = ({ id, title, isActive, handleClick }) => {
   return (
@@ -10,7 +10,7 @@ const PortofolioList = ({ id, title, isActive, handleClick }) => {
       {" "}
       {title}{" "}
     </li>
-  );
-};
+  )
+}
 
-export default PortofolioList;
+export default PortofolioList

@@ -2,8 +2,17 @@ import React from "react"
 import { useEffect, useState, useRef } from "react"
 import "./portofolio.scss"
 import PortofolioList from "../portofolioList/PortofolioList"
+
 import { sunnyside, restomenu, pomodoro, agency } from "../../data"
 import { gsap, Power3 } from "gsap"
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaVuejs,
+  FaHtml5,
+  FaSass,
+} from "react-icons/fa"
+import { SiJavascript } from "react-icons/si"
 
 const Portofolio = () => {
   const [selected, setSelected] = useState("agency")
@@ -113,52 +122,122 @@ const Portofolio = () => {
 
   return (
     <div className="portofolio" id="portofolio">
-      <h1 className="gradient-text">Portfolio</h1>
-      <div className="box moving-glow">
-        <div className="border-wrapper">
-          <ul>
-            {list.map((item) => {
-              if (item.id === selected) {
+      <h1 className="gradient-text">Internship Projects</h1>
+
+      <div className="internship-proj">
+        <div className="intern-proj-left">
+          <h3 className="intern-proj-num">
+            No.
+            <span className="intern-proj-num-color">01</span>
+          </h3>
+          <h2 className="intern-proj-title">CSS Animations Generator</h2>
+          <div className="proj-container">
+            <p className="intern-proj-desc">
+              My main project on this internship was to create a web application
+              wherein the user can experiment with a bunch of animations and
+              then generate their corresponding CSS code, which the designers
+              and developers at Make Technology could use and reference to speed
+              up development.
+            </p>
+          </div>
+          <div className="intern-proj-btn-container">
+            <a
+              href="https://vue-css-animations.netlify.app/"
+              className="intern-proj-btn"
+              target="_blank"
+            >
+              <FaExternalLinkAlt />
+              &nbsp; Live Website
+            </a>
+            <a href="" className="intern-proj-btn" target="_blank">
+              <FaGithub />
+              &nbsp; Github Repo
+            </a>
+          </div>
+          <ul className="intern-proj-tech">
+            <li className="proj-tech-item">
+              <span className="tech-logo">
+                {" "}
+                <FaVuejs />
+              </span>
+              &nbsp; <div className="">Vue</div>
+            </li>
+            <li className="proj-tech-item">
+              <span className="tech-logo">
+                <FaHtml5 />
+              </span>
+              &nbsp; <div className="">HTML</div>
+            </li>
+            <li className="proj-tech-item">
+              <span className="tech-logo">
+                <FaSass />
+              </span>
+              &nbsp;<div className="">SASS</div>
+            </li>
+            <li className="proj-tech-item">
+              <span className="tech-logo">
+                <SiJavascript />
+              </span>
+              &nbsp;<div className="">JavaScript</div>
+            </li>
+          </ul>
+        </div>
+        <div className="intern-proj-right">
+          <img src="/assets/intern-projects/portfolioPic.png" alt="" />
+        </div>
+      </div>
+      <div className="personal-projects">
+        <h1 className="gradient-text">Personal Projects</h1>
+        <div className="box moving-glow">
+          <div className="border-wrapper">
+            <ul className="project-list">
+              {list.map((item) => {
+                if (item.id === selected) {
+                  return (
+                    <PortofolioList
+                      id={item.id}
+                      title={item.title}
+                      isActive="active"
+                      handleClick={handleClick}
+                    />
+                  )
+                }
                 return (
                   <PortofolioList
                     id={item.id}
                     title={item.title}
-                    isActive="active"
                     handleClick={handleClick}
                   />
                 )
-              }
-              return (
-                <PortofolioList
-                  id={item.id}
-                  title={item.title}
-                  handleClick={handleClick}
-                />
-              )
-            })}
-          </ul>
+              })}
+            </ul>
+          </div>
         </div>
-      </div>
+        <div className="link-containers" ref={refBtns}>
+          <a href={activeLink} target="_blank">
+            <FaExternalLinkAlt />
+            &nbsp;
+            {btnData}'s site
+          </a>
+          <a href={githubLink} target="_blank">
+            <FaGithub />
+            &nbsp;
+            {btnData}'s code
+          </a>
+        </div>
 
-      <div className="link-containers" ref={refBtns}>
-        <a href={activeLink} target="_blank">
-          {btnData}'s website
-        </a>
-        <a href={githubLink} target="_blank">
-          {btnData}'s code
-        </a>
-      </div>
-      <div className="container" ref={refPics}>
-        {data.map((item) => {
-          return (
-            <div>
-              <div className="item" key={item.id}>
-                <img src={item.img} alt="" />
-                <h3>{item.title}</h3>
+        <div className="container" ref={refPics}>
+          {data.map((item) => {
+            return (
+              <div>
+                <div className="item" key={item.id}>
+                  <img src={item.img} alt="" />
+                  <h3>{item.title}</h3>
+                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
       </div>
     </div>
   )

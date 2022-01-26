@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   z-index: 5;
-  transition: all 1s ease;
+  transition: all 0.4s ease;
 
   scrollbar-width: none; /// hide scrollbar for firefox
   &::-webkit-scrollbar {

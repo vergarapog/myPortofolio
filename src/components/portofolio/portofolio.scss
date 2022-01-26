@@ -1,5 +1,12 @@
 @import "../../global.scss";
 
+.gradient-text {
+  background-image: linear-gradient(30deg, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .portofolio {
   display: flex;
   flex-direction: column;
@@ -15,167 +22,403 @@
     letter-spacing: 0.03em;
   }
 
-  .gradient-text {
-    background-image: linear-gradient(30deg, red, blue);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .box {
+  .internship-proj {
+    margin: 4em 0em 3em 0;
+    @include mobile {
+      margin: 1em 0em 0em 0;
+    }
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 80%;
     align-items: center;
-
-    position: relative;
-    overflow-y: hidden;
-
-    color: white;
-    font-weight: bold;
-    letter-spacing: 0.04em;
-    margin: 1.75em;
-
-    width: max-content;
-
     @include mobile {
-      width: 85%;
+      flex-direction: column-reverse;
     }
 
-    padding: 0em;
-    border-radius: 20px;
-  }
-
-  .moving-glow::before,
-  .moving-glow::after {
-    content: "";
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    background: linear-gradient(
-      45deg,
-      #fb0094,
-      #0000ff,
-      #ff0000,
-      #0000ff,
-      #ff0000
-    );
-    background-size: 400%;
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
-    z-index: -1;
-    animation: anim-moving-glow 20s ease-in-out infinite;
-  }
-
-  @keyframes anim-moving-glow {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 100% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
-
-  .moving-glow:after {
-    filter: blur(30px);
-  }
-
-  ul {
-    padding: 0em;
-    margin: 1em;
-    list-style: none;
-    display: flex;
-
-    @include mobile {
-      margin: 10px 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-  .link-containers {
-    display: flex;
-    justify-content: space-evenly;
-    // background-color: $mainColor;
-    margin-bottom: 1em;
-    width: 35%;
-    border-radius: 25px;
-    text-align: center;
-
-    @include mobile {
-      width: 80%;
-      background-color: white;
-      margin: 10px 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    a {
-      margin: 0.8em 0.5em;
-      width: 12em;
-      height: 2.5em;
-      font-size: 1.1rem;
-      letter-spacing: 0.4px;
-      font-weight: 600;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      background-color: $mainColor;
-      color: white;
-    }
-  }
-
-  .container {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-
-    @include mobile {
-      width: 100%;
-    }
-
-    .item {
-      width: 28em;
-      height: 18em;
-      border-radius: 1em;
-      border: 1px solid lightgrey;
-      margin: 1em 1em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      position: relative;
-      transition: all 0.5s ease;
-      cursor: pointer;
-
+    .intern-proj-left {
+      // flex: 1;
+      width: 40%;
       @include mobile {
-        margin: 0.5em 1em;
-        width: 16em;
-        height: 12em;
+        width: 90%;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // background-color: $mainColor;
+      // color: #fff;
+      padding: 3em;
+      border-radius: 20px;
+
+      .intern-proj-num {
+        font-size: 2rem;
+        .intern-proj-num-color {
+          color: crimson;
+        }
+        @include mobile {
+          font-size: 1.7rem;
+        }
       }
 
-      h3 {
-        position: absolute;
-        font-size: 1.3rem;
+      .intern-proj-title {
+        color: $mainColor;
+        // color: #fff;
+
+        font-size: 3rem;
+        @include mobile {
+          font-size: 2.2rem;
+        }
+      }
+
+      .proj-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $mainColor;
+        padding: 1.5em 3em 1.5em 1.5em;
+        border-radius: 10px;
+        color: white;
+        margin: 1em 0;
+
+        @include mobile {
+          padding: 1.5em 1.5em 1.5em 1.5em;
+        }
+
+        .intern-proj-desc {
+          font-size: 1.25rem;
+          padding: 0 0 0 0;
+          text-align: justify;
+          @include mobile {
+            text-align: center;
+            font-size: 1.1rem;
+          }
+          border-radius: 10px;
+          // letter-spacing: 3px;
+          line-height: 1.7rem;
+          font-weight: 300;
+        }
+      }
+
+      .intern-proj-btn-container {
+        display: flex;
+        @include mobile {
+          justify-content: center;
+        }
+        width: 100%;
+        // padding: 2em 2em 2em 0;
+        @include mobile {
+          // padding: 2em 2em 2em 0;
+        }
+        .intern-proj-btn {
+          text-decoration: none;
+          padding: 20px 40px;
+          font-size: 1rem;
+          @include mobile {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+          }
+          font-weight: 600;
+          position: relative;
+          margin: 1em 1em 1em 0;
+          @include mobile {
+            margin: 0.3em;
+          }
+          color: #000;
+
+          background-color: crimson;
+          color: #fff;
+          border-radius: 20px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          transition: all 0.3s ease;
+          box-shadow: inset 0 0 0 0 $mainColor;
+
+          &::before,
+          &::after {
+            content: "";
+            border: 3px solid #000;
+            position: absolute;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            border-radius: 20px;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: all 0.3s ease;
+          }
+
+          &:hover {
+            background-color: transparent;
+            color: black;
+            // animation: btnLink 3s infinite;
+            // @keyframes btnLink {
+            //   100% {
+            //     box-shadow: inset 15em 0 0 0 lightgreen;
+            //   }
+            // }
+          }
+
+          &:hover::before {
+            transform: translate(-5px, -5px);
+          }
+          &:hover::after {
+            transform: translate(5px, 5px);
+          }
+        }
+      }
+
+      .intern-proj-tech {
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1rem;
+        @include mobile {
+          font-size: 0.8rem;
+          justify-content: space-around;
+        }
+        font-weight: 500;
+        margin: 1em 1em 1em 0;
+        padding: 0;
+        text-align: center;
+        .proj-tech-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .tech-logo {
+            font-size: 1.2rem;
+          }
+          // background-color: crimson;
+          padding: 1em;
+          @include mobile {
+            padding: 0.5em;
+            flex-direction: column;
+          }
+          border-radius: 20px;
+          color: black;
+          margin-right: 1em;
+          @include mobile {
+            margin: 0.2em;
+          }
+          transition: all 0.3s ease;
+          user-select: none;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .intern-proj-right {
+      // flex: 1;
+      width: 60%;
+
+      @include mobile {
+        width: 125%;
+        margin-top: 2em;
       }
 
       img {
         width: 100%;
-        height: 100%;
-        z-index: 1;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .personal-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 0;
+    width: 80%;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+      overflow-y: hidden;
+
+      color: white;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      margin: 1.75em;
+
+      max-width: max-content;
+
+      @include mobile {
+        width: 85%;
+        max-width: none;
       }
 
-      &:hover {
+      padding: 0em;
+      border-radius: 20px;
+    }
+
+    .project-list {
+      counter-reset: projCtr;
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      li::before {
+        counter-increment: projCtr;
+        content: counter(projCtr);
+        background-color: #fff;
+        color: $mainColor;
+        border-radius: 50%;
+        padding: 0.15em 0.4em;
+        text-align: center;
+      }
+    }
+
+    .moving-glow::before,
+    .moving-glow::after {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      background: linear-gradient(
+        45deg,
+        #fb0094,
+        #0000ff,
+        #ff0000,
+        #0000ff,
+        #ff0000
+      );
+      background-size: 400%;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: anim-moving-glow 20s ease-in-out infinite;
+    }
+
+    @keyframes anim-moving-glow {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 100% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .moving-glow:after {
+      filter: blur(30px);
+    }
+
+    .project-list {
+      padding: 0em;
+      margin: 1em;
+      list-style: none;
+      display: flex;
+
+      @include mobile {
+        margin: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    .link-containers {
+      display: flex;
+      justify-content: center;
+      // background-color: $mainColor;
+      margin-bottom: 1em;
+      width: 35%;
+      border-radius: 25px;
+      text-align: center;
+
+      @include mobile {
+        width: 80%;
+        background-color: white;
+        margin: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      a {
+        margin: 0.8em 0.75em;
+        width: 12em;
+        height: 2.5em;
+        font-size: 1.1rem;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
         background-color: $mainColor;
+        color: white;
+        box-shadow: inset 0 0 0 0 $mainColor;
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: inset 12em 0 0 0 crimson;
+        }
+      }
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .item {
+        width: 28em;
+        height: 18em;
+        border-radius: 1em;
+        border: 1px solid lightgrey;
+        margin: 1em 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+        @include mobile {
+          margin: 0.5em 1em;
+          width: 20em;
+          height: 12em;
+        }
+
+        h3 {
+          position: absolute;
+          font-size: 1.3rem;
+        }
+
         img {
-          opacity: 0.5;
-          z-index: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+
+        &:hover {
+          background-color: $mainColor;
+          img {
+            opacity: 0.5;
+            z-index: 0;
+          }
         }
       }
     }

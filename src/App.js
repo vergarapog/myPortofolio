@@ -21,7 +21,7 @@ function App() {
         </div>
         {/* <Works /> */}
         <div className="long">
-          {/* <div className="spacer layer1"></div> */}
+          <div className="spacer layer1"></div>
           <Skills />
           {/* <div className="spacer layer1 flip"></div> */}
         </div>

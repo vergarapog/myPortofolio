@@ -23,9 +23,11 @@ const Intro = () => {
   useEffect(() => {
     init(textRef.current, {
       showCursor: false,
-      backDelay: 1000,
+      backDelay: 2000,
+      typeSpeed: 150,
+      backSpeed: 100,
       showCursor: true,
-      strings: ["Aspiring", "Ambitious", "Motivated", "Commited"],
+      strings: ["Ambitious", "Determined", "Commited"],
     })
   }, [])
 
@@ -116,6 +118,7 @@ const Intro = () => {
         duration: 2,
         autoAlpha: 1,
         y: 0,
+        opacity: 1,
         ease: Power3.easeInOut,
       }
     )
@@ -132,6 +135,8 @@ const Intro = () => {
         duration: 2,
         autoAlpha: 1,
         y: 0,
+        opacity: 1,
+
         ease: Power3.easeInOut,
       }
     )
@@ -148,25 +153,38 @@ const Intro = () => {
         <div className="wrapper">
           <h2 ref={titleRef}>Hi There, I'm</h2>
           <h1 ref={nameRef}>Brian Vergara</h1>
+
           <h3 ref={jobRef}>
-            <span ref={textRef}></span> Front-End Engineer
+            <span ref={textRef}></span> Front-End Developer
           </h3>
+
+          {/* <div className="adjectives">
+            <div className="title">
+              <div className="title-wrapper">
+                <div className="title-item">Web Developer</div>
+                <div className="title-item">Next.JS</div>
+                <div className="title-item">Vue</div>
+                <div className="title-item">Chakra UI</div>
+              </div>
+            </div>
+            <h3 ref={jobRef}>Front End Engineer</h3>
+          </div> */}
+
           <div className="resume-wrapper">
-            <div className="link-container">
+            <div className="link-container" ref={button}>
               <a
                 href="https://github.com/vergarapog"
                 target="_blank"
-                ref={button}
+                className="btn btn-1"
               >
                 My Github
               </a>
             </div>
-            <div className="link-container">
+            <div className="link-container" ref={button2}>
               <a
-                className="creative"
+                className="btn btn-1 crimson-btn"
                 href="https://drive.google.com/file/d/1zLueu5hHmAMwzw0aDiRSBPLtNHEit6Qb/view?usp=sharing"
                 target="_blank"
-                ref={button2}
               >
                 My Resume
               </a>
