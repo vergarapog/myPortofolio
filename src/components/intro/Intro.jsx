@@ -26,6 +26,7 @@ const Intro = () => {
       backDelay: 2000,
       typeSpeed: 150,
       backSpeed: 100,
+      startDelay: 4000,
       showCursor: true,
       strings: ["Ambitious", "Determined", "Commited"],
     })
