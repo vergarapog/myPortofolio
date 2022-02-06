@@ -133,26 +133,26 @@ const Portofolio = () => {
           <h2 className="intern-proj-title">CSS Animations Generator</h2>
           <div className="proj-container">
             <p className="intern-proj-desc">
-              My main project on this internship was to create a web application
+              My main goal on this internship was to create a web application
               wherein the user can experiment with a bunch of animations and
               then generate their corresponding CSS code, which the designers
-              and developers at Make Technology could use and reference to speed
-              up development.
+              and developers at my Internship company could use and reference in
+              development.
             </p>
           </div>
           <div className="intern-proj-btn-container">
             <a
               href="https://vue-css-animations.netlify.app/"
-              className="intern-proj-btn"
+              className="intern-proj-btn-active"
               target="_blank"
             >
               <FaExternalLinkAlt />
               &nbsp; Live Website
             </a>
-            <a href="" className="intern-proj-btn" target="_blank">
+            <p href="" className="intern-proj-btn" target="_blank">
               <FaGithub />
-              &nbsp; Github Repo
-            </a>
+              &nbsp; Repo (Private)
+            </p>
           </div>
           <ul className="intern-proj-tech">
             <li className="proj-tech-item">

@@ -1,5 +1,5 @@
-import React from "react";
-import "./skills.scss";
+import React from "react"
+import "./skills.scss"
 
 const Testimonials = () => {
   return (
@@ -15,6 +15,7 @@ const Testimonials = () => {
           </p>
         </div>
         <h2>My Toolbox</h2>
+
         <section className="skills-grid">
           <div className="card">
             <p>HTML</p>
@@ -41,17 +42,21 @@ const Testimonials = () => {
             <img src="/assets/skills/github.png" alt="" />
           </div>
           <div className="card">
-            <p>Node Package Manager</p>
+            <p>NPM</p>
             <img src="/assets/skills/npm.png" alt="" />
           </div>
           <div className="card">
             <p>VS Code</p>
             <img src="/assets/skills/vscode.png" alt="" />
           </div>
+          <div className="card">
+            <p>Vue.js</p>
+            <img src="/assets/skills/vue.png" alt="" />
+          </div>
         </section>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Testimonials;
+export default Testimonials
