@@ -158,6 +158,10 @@
         margin-top: 20px;
         height: 100px;
 
+        @include mobile {
+          margin-top: 0px;
+        }
+
         // align-items: center;
 
         .link-container {
