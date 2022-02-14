@@ -263,14 +263,14 @@ const Portofolio = () => {
             </p>
           </div>
           <div className="intern-proj-btn-container">
-            <a
+            <p
               href="https://vue-css-animations.netlify.app/"
-              className="intern-proj-btn-active intern-btn"
+              className="intern-proj-btn intern-btn"
               target="_blank"
             >
               <FaExternalLinkAlt />
-              &nbsp; Live Website
-            </a>
+              &nbsp; Website (Private)
+            </p>
             <p href="" className="intern-proj-btn intern-btn" target="_blank">
               <FaGithub />
               &nbsp; Repo (Private)
