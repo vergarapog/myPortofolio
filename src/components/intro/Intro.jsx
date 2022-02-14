@@ -184,7 +184,7 @@ const Intro = () => {
             <div className="link-container" ref={button2}>
               <a
                 className="btn btn-1 crimson-btn"
-                href="https://drive.google.com/file/d/1xoaSGRhH6EBDBwLWO0u_8MPxU4XvNR9U/view?usp=sharing"
+                href="https://drive.google.com/file/d/1kKb7DfBAGH_y2_pMzZ6jtDqzjv9AHm_f/view?usp=sharing"
                 target="_blank"
               >
                 My Resume
