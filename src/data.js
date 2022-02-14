@@ -29,7 +29,7 @@ export const sunnyside = [
     title: "Mobile View",
     img: "/assets/projects/sunnyside/sunnyside6-min.jpg",
   },
-];
+]
 
 export const restomenu = [
   {
@@ -52,7 +52,7 @@ export const restomenu = [
     title: "Jolibee Favorites - Mobile View",
     img: "/assets/projects/jolibeefav/jolibeefav4-min.jpg",
   },
-];
+]
 
 export const pomodoro = [
   {
@@ -70,7 +70,7 @@ export const pomodoro = [
     title: "Pomodoro mobile view",
     img: "/assets/projects/pomodoro/pomodoro-3-min.jpg",
   },
-];
+]
 
 export const agency = [
   {
@@ -103,4 +103,32 @@ export const agency = [
     title: "Agency Mobile view",
     img: "/assets/projects/agency123/agency6-min.jpg",
   },
-];
+]
+
+export const bootfront = [
+  {
+    id: 1,
+    title: "Showcase Section",
+    img: "/assets/projects/bootfront/bootfront1-min.jpg",
+  },
+  {
+    id: 2,
+    title: "Cards Section",
+    img: "/assets/projects/bootfront/bootfront2-min.jpg",
+  },
+  {
+    id: 3,
+    title: "Questions Section",
+    img: "/assets/projects/bootfront/bootfront3-min.jpg",
+  },
+  {
+    id: 4,
+    title: "Footer Section",
+    img: "/assets/projects/bootfront/bootfront5-min.jpg",
+  },
+  {
+    id: 4,
+    title: "Mobile Responsive",
+    img: "/assets/projects/bootfront/bootfront4-min.jpg",
+  },
+]

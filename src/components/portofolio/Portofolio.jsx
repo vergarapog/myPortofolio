@@ -3,8 +3,9 @@ import { useEffect, useState, useRef } from "react"
 import "./portofolio.scss"
 import PortofolioList from "../portofolioList/PortofolioList"
 
-import { sunnyside, restomenu, pomodoro, agency } from "../../data"
+import { sunnyside, restomenu, pomodoro, agency, bootfront } from "../../data"
 import { gsap, Power3 } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import {
   FaGithub,
   FaExternalLinkAlt,
@@ -14,8 +15,10 @@ import {
 } from "react-icons/fa"
 import { SiJavascript } from "react-icons/si"
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Portofolio = () => {
-  const [selected, setSelected] = useState("agency")
+  const [selected, setSelected] = useState("bootfront")
   const [data, setData] = useState(agency)
   const [activeLink, setActiveLink] = useState(
     "https://agency1234.netlify.app/"
@@ -43,6 +46,7 @@ const Portofolio = () => {
         duration: 2,
         autoAlpha: 1,
         y: 0,
+        stagger: 0.2,
         ease: Power3.easeInOut,
       }
     )
@@ -59,9 +63,28 @@ const Portofolio = () => {
         ease: Power3.easeInOut,
       }
     )
+    gsap.fromTo(
+      ".item",
+      {
+        autoAlpha: 0,
+        y: 30,
+      },
+      {
+        duration: 0.3,
+        autoAlpha: 1,
+        y: 0,
+        stagger: 0.3,
+        ease: Power3.easeInOut,
+      }
+    )
   }, [selected])
 
   const list = [
+    {
+      id: "bootfront",
+      title: "BootFront Site",
+      link: "",
+    },
     {
       id: "agency",
       title: "Theoretical Client Site",
@@ -114,11 +137,110 @@ const Portofolio = () => {
         setBtnData("Pomodoro")
 
         break
+      case "bootfront":
+        setData(bootfront)
+        setActiveLink("https://bootfront.netlify.app/")
+        setGithubLink("https://github.com/vergarapog/bootcamp")
+        setBtnData("BootFront")
+
+        break
 
       default:
         setData(sunnyside)
     }
   }, [selected])
+
+  useEffect(() => {
+    //GSAP Internship animation
+    const internProj = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".internship-proj",
+        // markers: true,
+        start: "top 55%",
+        end: "top 30%",
+      },
+    })
+
+    internProj
+      .fromTo(
+        ".intern-proj-right",
+        {
+          scale: 0.5,
+          y: "100px",
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          y: 0,
+
+          opacity: 1,
+          duration: 0.8,
+        }
+      )
+      .fromTo(
+        ".intern-proj-title",
+        {
+          y: "30px",
+          opacity: 0,
+        },
+        {
+          y: "0",
+          opacity: 1,
+          duration: 0.3,
+        }
+      )
+      .fromTo(
+        ".proj-container",
+        {
+          y: "30px",
+          opacity: 0,
+        },
+        {
+          y: "0",
+          opacity: 1,
+          duration: 0.3,
+        },
+        "<.01"
+      )
+      .fromTo(
+        ".intern-btn",
+        {
+          y: "30px",
+          opacity: 0,
+        },
+        {
+          y: "0",
+          opacity: 1,
+          duration: 0.3,
+          stagger: 0.3,
+        }
+      )
+      .fromTo(
+        ".proj-tech-item",
+        {
+          x: "-30px",
+          opacity: 0,
+        },
+        {
+          x: "0",
+          opacity: 1,
+          duration: 0.3,
+          stagger: 0.2,
+        }
+      )
+      .fromTo(
+        ".intern-proj-num",
+        {
+          x: "-100%",
+          opacity: 0,
+        },
+        {
+          x: "0",
+          opacity: 1,
+          duration: 0.4,
+        }
+      )
+  }, [])
 
   return (
     <div className="portofolio" id="portofolio">
@@ -143,13 +265,13 @@ const Portofolio = () => {
           <div className="intern-proj-btn-container">
             <a
               href="https://vue-css-animations.netlify.app/"
-              className="intern-proj-btn-active"
+              className="intern-proj-btn-active intern-btn"
               target="_blank"
             >
               <FaExternalLinkAlt />
               &nbsp; Live Website
             </a>
-            <p href="" className="intern-proj-btn" target="_blank">
+            <p href="" className="intern-proj-btn intern-btn" target="_blank">
               <FaGithub />
               &nbsp; Repo (Private)
             </p>
@@ -199,6 +321,7 @@ const Portofolio = () => {
                       title={item.title}
                       isActive="active"
                       handleClick={handleClick}
+                      key={item.id}
                     />
                   )
                 }
@@ -207,6 +330,7 @@ const Portofolio = () => {
                     id={item.id}
                     title={item.title}
                     handleClick={handleClick}
+                    key={item.id}
                   />
                 )
               })}
