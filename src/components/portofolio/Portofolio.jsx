@@ -153,6 +153,7 @@ const Portofolio = () => {
   useEffect(() => {
     //GSAP Internship animation
     const internProj = gsap.timeline({
+      defaults: { ease: "power2" },
       scrollTrigger: {
         trigger: ".internship-proj",
         // markers: true,
@@ -162,6 +163,7 @@ const Portofolio = () => {
     })
 
     internProj
+
       .fromTo(
         ".intern-proj-right",
         {
@@ -175,6 +177,18 @@ const Portofolio = () => {
 
           opacity: 1,
           duration: 0.8,
+        }
+      )
+      .fromTo(
+        ".intern-proj-num",
+        {
+          x: "-10px",
+          opacity: 0,
+        },
+        {
+          x: "0",
+          opacity: 1,
+          duration: 0.4,
         }
       )
       .fromTo(
@@ -212,33 +226,23 @@ const Portofolio = () => {
           y: "0",
           opacity: 1,
           duration: 0.3,
-          stagger: 0.3,
-        }
+          stagger: 0.1,
+        },
+        "<"
       )
       .fromTo(
         ".proj-tech-item",
         {
-          x: "-30px",
+          x: "-5px",
           opacity: 0,
         },
         {
           x: "0",
           opacity: 1,
           duration: 0.3,
-          stagger: 0.2,
-        }
-      )
-      .fromTo(
-        ".intern-proj-num",
-        {
-          x: "-100%",
-          opacity: 0,
+          stagger: 0.1,
         },
-        {
-          x: "0",
-          opacity: 1,
-          duration: 0.4,
-        }
+        2
       )
   }, [])
 

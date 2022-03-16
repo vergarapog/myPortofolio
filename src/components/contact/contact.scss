@@ -47,6 +47,7 @@
         width: 20em;
         height: 18em;
         font-size: 1rem;
+        resize: none;
         @include mobile {
           width: 13em;
           height: 6em;

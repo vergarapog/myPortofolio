@@ -11,6 +11,7 @@ const Testimonials = () => {
   useEffect(() => {
     //GSAP Internship animation
     const about = gsap.timeline({
+      defaults: { ease: "power2" },
       scrollTrigger: {
         trigger: ".txt-container",
         // markers: true,
@@ -23,8 +24,8 @@ const Testimonials = () => {
       .fromTo(
         ".about-title",
         {
-          scale: 0.5,
-          y: "100px",
+          // scale: 0.5,
+          y: "30",
           opacity: 0,
         },
         {
@@ -44,8 +45,9 @@ const Testimonials = () => {
         {
           y: "0",
           opacity: 1,
-          duration: 0.3,
-        }
+          duration: 0.8,
+        },
+        "<"
       )
       .fromTo(
         ".toolbox-title",
@@ -69,7 +71,7 @@ const Testimonials = () => {
           y: "0",
           opacity: 1,
           duration: 0.2,
-          stagger: 0.15,
+          stagger: 0.1,
         }
       )
   }, [])
