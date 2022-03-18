@@ -242,7 +242,7 @@ const Portofolio = () => {
           duration: 0.3,
           stagger: 0.1,
         },
-        2
+        1
       )
   }, [])
 
