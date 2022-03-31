@@ -17,7 +17,7 @@ const Testimonials = () => {
     useElementOnScreen(
       {
         // root: null,
-        rootMargin: "0px 0px -700px 0px",
+        rootMargin: "0px 0px -500px 0px",
         threshold: 0,
       },
       aboutMeRef
