@@ -1,13 +1,29 @@
 import React from "react"
 import "./skills.scss"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGlobalContext } from "../../context"
+import useElementOnScreen from "../../hooks/useElementOnScreen"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Testimonials = () => {
+  const { setIsNavDark } = useGlobalContext()
+
+  const aboutMeRef = useRef(null)
+  setIsNavDark(
+    useElementOnScreen(
+      {
+        // root: null,
+        rootMargin: "0px 0px -700px 0px",
+        threshold: 0,
+      },
+      aboutMeRef
+    )
+  )
+
   useEffect(() => {
     //GSAP Internship animation
     const about = gsap.timeline({
@@ -59,7 +75,8 @@ const Testimonials = () => {
           y: "0",
           opacity: 1,
           duration: 0.3,
-        }
+        },
+        "<0.2"
       )
       .fromTo(
         ".card",
@@ -72,11 +89,12 @@ const Testimonials = () => {
           opacity: 1,
           duration: 0.2,
           stagger: 0.1,
-        }
+        },
+        "<0.1"
       )
   }, [])
   return (
-    <div className="skills" id="skills">
+    <div className="skills" id="skills" ref={aboutMeRef}>
       <div className="container">
         <div className="txt-container">
           <h2 className="about-title">About Me</h2>

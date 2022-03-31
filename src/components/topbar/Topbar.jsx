@@ -3,9 +3,12 @@ import { useEffect, useRef } from "react"
 import "./topbar.scss"
 import { Person, Mail } from "@material-ui/icons"
 import { gsap } from "gsap"
+import { useGlobalContext } from "../../context"
 
 const Topbar = ({ menuValue, setMenu }) => {
   const topbarRef = useRef()
+
+  const { isNavDark } = useGlobalContext()
 
   useEffect(() => {
     gsap.from(topbarRef.current, {
@@ -18,7 +21,14 @@ const Topbar = ({ menuValue, setMenu }) => {
   }, [])
 
   return (
-    <div className={"topbar " + (menuValue && "active")}>
+    <div
+      className={
+        "topbar " +
+        (menuValue && "active") +
+        " " +
+        (isNavDark && "on-about-section")
+      }
+    >
       <div className="wrapper" ref={topbarRef}>
         <div className="left">
           <a href="#works" className="logo">

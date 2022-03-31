@@ -266,7 +266,7 @@ const Portofolio = () => {
               development.
             </p>
           </div>
-          <div className="intern-proj-btn-container">
+          {/* <div className="intern-proj-btn-container">
             <p
               href="https://vue-css-animations.netlify.app/"
               className="intern-proj-btn intern-btn"
@@ -279,7 +279,7 @@ const Portofolio = () => {
               <FaGithub />
               &nbsp; Repo (Private)
             </p>
-          </div>
+          </div> */}
           <ul className="intern-proj-tech">
             <li className="proj-tech-item">
               <span className="tech-logo">

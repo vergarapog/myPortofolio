@@ -6,10 +6,25 @@ import Works from "./components/works/Works"
 import Skills from "./components/skills/Skills"
 import Contact from "./components/contact/Contact"
 import "./app.scss"
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { useGlobalContext } from "./context"
+import useElementOnScreen from "./hooks/useElementOnScreen"
 
 function App() {
+  const { setIsNavDark } = useGlobalContext()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  // const aboutMeRef = useRef(null)
+  // setIsNavDark(
+  //   useElementOnScreen(
+  //     {
+  //       root: null,
+  //       rootMargin: "0px",
+  //       threshold: 0.7,
+  //     },
+  //     aboutMeRef
+  //   )
+  // )
+
   return (
     <div className="app">
       <Topbar menuValue={isMenuOpen} setMenu={setIsMenuOpen} />
@@ -22,7 +37,9 @@ function App() {
         {/* <Works /> */}
         <div className="long">
           <div className="spacer layer1"></div>
-          <Skills />
+          <div className="">
+            <Skills />
+          </div>
           {/* <div className="spacer layer1 flip"></div> */}
         </div>
         <Contact />

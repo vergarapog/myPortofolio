@@ -107,4 +107,30 @@
       }
     }
   }
+
+  &.on-about-section {
+    background-color: $mainColor;
+    color: white;
+
+    .hamburger {
+      scrollbar-width: none; /// hide scrollbar for firefox
+      &::-webkit-scrollbar {
+        //hide scrollbar for other browsers
+        display: none;
+      }
+
+      span {
+        &:first-child {
+          background-color: white;
+        }
+        &:nth-child(2) {
+          // background-color: lightcoral;
+          background-color: white;
+        }
+        &:last-child {
+          background-color: white;
+        }
+      }
+    }
+  }
 }
