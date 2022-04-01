@@ -201,7 +201,8 @@ const Portofolio = () => {
           y: "0",
           opacity: 1,
           duration: 0.3,
-        }
+        },
+        "<.01"
       )
       .fromTo(
         ".proj-container",
