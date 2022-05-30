@@ -49,7 +49,7 @@ const Testimonials = () => {
           y: 0,
 
           opacity: 1,
-          duration: 0.8,
+          duration: 0.5,
         }
       )
       .fromTo(
@@ -61,7 +61,7 @@ const Testimonials = () => {
         {
           y: "0",
           opacity: 1,
-          duration: 0.8,
+          duration: 0.5,
         },
         "<"
       )
@@ -88,7 +88,7 @@ const Testimonials = () => {
           y: "0",
           opacity: 1,
           duration: 0.2,
-          stagger: 0.1,
+          stagger: 0.05,
         },
         "<0.1"
       )
