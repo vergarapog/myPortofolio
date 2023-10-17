@@ -1,5 +1,5 @@
-import React from "react"
-import "./menu.scss"
+import React from "react";
+import "./menu.scss";
 
 const menu = ({ menuValue, setMenu }) => {
   return (
@@ -9,7 +9,7 @@ const menu = ({ menuValue, setMenu }) => {
           <a href="#intro">Home</a>
         </li>
         <li className="menu-item" onClick={() => setMenu(!menuValue)}>
-          <a href="#portofolio">Portofolio</a>
+          <a href="#portofolio">Portfolio</a>
         </li>
         <li className="menu-item" onClick={() => setMenu(!menuValue)}>
           <a href="#skills">About Me</a>
@@ -24,7 +24,7 @@ const menu = ({ menuValue, setMenu }) => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default menu
+export default menu;

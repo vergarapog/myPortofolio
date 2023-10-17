@@ -22,6 +22,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     h2 {
       font-size: 2.5rem;
@@ -66,6 +67,33 @@
       span {
         font-weight: 600;
         color: green;
+      }
+    }
+
+    a.bottom {
+      position: absolute;
+      bottom: 2em;
+      left: 80%;
+      align-self: flex-end;
+      transform: rotateX(180deg);
+
+      @include mobile {
+        bottom: 1.5em;
+      }
+
+      img {
+        width: 3em;
+        animation: arrowBlink 0.8s infinite alternate;
+        @include mobile {
+          width: 2em;
+        }
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+          transform: scale(1);
+        }
       }
     }
   }

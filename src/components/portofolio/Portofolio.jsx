@@ -360,7 +360,7 @@ const Portofolio = () => {
             return (
               <div>
                 <div className="item" key={item.id}>
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="" loading="lazy" />
                   <h3>{item.title}</h3>
                 </div>
               </div>

@@ -24,8 +24,6 @@ const Contact = () => {
       );
   };
 
-  function sendEmail(e) {}
-
   return (
     <div className="contact" id="contact">
       <div className="left">
@@ -39,6 +37,10 @@ const Contact = () => {
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>
+
+        <a className="bottom" href="#intro">
+          <img src="assets/down.png" alt="" />
+        </a>
       </div>
     </div>
   );
