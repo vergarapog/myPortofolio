@@ -34,7 +34,6 @@ function App() {
         <div className="long">
           <Portofolio />
         </div>
-        {/* <Works /> */}
         <div className="long">
           <div className="spacer layer1"></div>
           <div className="">

@@ -22,19 +22,21 @@
     letter-spacing: 0.03em;
   }
 
-  .internship-proj {
+  .project {
     margin: 2.5em 0em 2.5em 0;
     @include mobile {
       margin: 1em 0em 0em 0;
     }
     display: flex;
+
     width: 80%;
     align-items: center;
+
     @include mobile {
       flex-direction: column-reverse;
     }
 
-    .intern-proj-left {
+    .proj-left {
       // flex: 1;
       width: 40%;
       @include mobile {
@@ -48,9 +50,9 @@
       padding: 3em;
       border-radius: 20px;
 
-      .intern-proj-num {
+      .proj-num {
         font-size: 2rem;
-        .intern-proj-num-color {
+        .proj-num-color {
           color: crimson;
         }
         @include mobile {
@@ -58,7 +60,7 @@
         }
       }
 
-      .intern-proj-title {
+      .proj-title {
         color: $mainColor;
         // color: #fff;
 
@@ -82,7 +84,7 @@
           padding: 1.5em 1.5em 1.5em 1.5em;
         }
 
-        .intern-proj-desc {
+        .proj-desc {
           font-size: 1.25rem;
           padding: 0 0 0 0;
           // text-align: justify;
@@ -97,7 +99,7 @@
         }
       }
 
-      .intern-proj-btn-container {
+      .proj-btn-container {
         display: flex;
         @include mobile {
           justify-content: center;
@@ -107,7 +109,7 @@
         @include mobile {
           // padding: 2em 2em 2em 0;
         }
-        .intern-proj-btn-active {
+        .proj-btn-active {
           text-decoration: none;
           padding: 20px 40px;
           font-size: 1rem;
@@ -149,7 +151,7 @@
             // }
           }
         }
-        .intern-proj-btn {
+        .proj-btn {
           text-decoration: none;
           padding: 20px 40px;
           font-size: 1rem;
@@ -223,7 +225,7 @@
       //   background-color: white;
       // }
 
-      .intern-proj-tech {
+      .proj-tech {
         width: 100%;
         display: flex;
         list-style-type: none;
@@ -266,7 +268,7 @@
         }
       }
     }
-    .intern-proj-right {
+    .proj-right {
       // flex: 1;
       width: 60%;
 
@@ -284,201 +286,10 @@
       }
     }
   }
+}
 
-  .personal-projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3em 0;
-    width: 80%;
-
-    .box {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      position: relative;
-      overflow-y: hidden;
-
-      color: white;
-      font-weight: bold;
-      letter-spacing: 0.04em;
-      margin: 1.75em;
-
-      max-width: max-content;
-
-      @include mobile {
-        width: 85%;
-        max-width: none;
-      }
-
-      padding: 0em;
-      border-radius: 20px;
-    }
-
-    .project-list {
-      // counter-reset: projCtr;
-      @include mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      // li::before {
-      //   counter-increment: projCtr;
-      //   content: counter(projCtr);
-      //   background-color: #fff;
-      //   color: $mainColor;
-      //   border-radius: 50%;
-      //   padding: 0.15em 0.4em;
-      //   text-align: center;
-      // }
-    }
-
-    .moving-glow::before,
-    .moving-glow::after {
-      content: "";
-      position: absolute;
-      left: -2px;
-      top: -2px;
-      background: linear-gradient(
-        45deg,
-        #fb0094,
-        #0000ff,
-        #ff0000,
-        #0000ff,
-        #ff0000
-      );
-      background-size: 400%;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      animation: anim-moving-glow 20s ease-in-out infinite;
-    }
-
-    @keyframes anim-moving-glow {
-      0% {
-        background-position: 0 0;
-      }
-      50% {
-        background-position: 100% 0;
-      }
-      100% {
-        background-position: 0 0;
-      }
-    }
-
-    .moving-glow:after {
-      filter: blur(30px);
-    }
-
-    .project-list {
-      padding: 0em;
-      margin: 1em;
-      list-style: none;
-      display: flex;
-
-      @include mobile {
-        margin: 10px 0;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-
-    .link-containers {
-      display: flex;
-      justify-content: center;
-      // background-color: $mainColor;
-      margin-bottom: 1em;
-      width: 35%;
-      border-radius: 25px;
-      text-align: center;
-
-      @include mobile {
-        width: 80%;
-        background-color: white;
-        margin: 10px 0;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      a {
-        margin: 0.8em 0.75em;
-        width: 12em;
-        height: 2.5em;
-        font-size: 1.1rem;
-        letter-spacing: 0.4px;
-        font-weight: 600;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        background-color: forestgreen;
-        color: white;
-        // box-shadow: inset 0 0 0 0 $mainColor;
-        transition: all 0.3s ease;
-
-        &:hover {
-          // box-shadow: inset 12em 0 0 0 crimson;
-          background-color: lightgreen;
-          color: black;
-        }
-      }
-    }
-
-    .container {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-
-      @include mobile {
-        width: 100%;
-      }
-
-      .item {
-        width: 28em;
-        height: 18em;
-        border-radius: 1em;
-        border: 1px solid lightgrey;
-        margin: 1em 1em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        position: relative;
-        transition: all 0.5s ease;
-        cursor: pointer;
-
-        @include mobile {
-          margin: 0.5em 1em;
-          width: 20em;
-          height: 12em;
-        }
-
-        h3 {
-          position: absolute;
-          font-size: 1.3rem;
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-        }
-
-        &:hover {
-          background-color: $mainColor;
-          img {
-            opacity: 0.5;
-            z-index: 0;
-          }
-        }
-      }
-    }
-  }
+.flex-reverse-row {
+  flex-direction: row-reverse;
 }
 
 @-webkit-keyframes vibrate-3 {
