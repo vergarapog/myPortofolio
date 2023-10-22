@@ -143,11 +143,11 @@ const Portofolio = () => {
                   target="_blank"
                 >
                   <FaExternalLinkAlt />
-                  &nbsp; Website (Private)
+                  &nbsp; Website
                 </p>
                 <p href="" className="proj-btn btn" target="_blank">
                   <FaGithub />
-                  &nbsp; Repo (Private)
+                  &nbsp; Repo
                 </p>
               </div>
               <ul className="proj-tech">
@@ -179,7 +179,7 @@ const Portofolio = () => {
               </ul>
             </div>
             <div className="proj-right">
-              <img src="/assets/intern-projects/portfolioPic.png" alt="" />
+              <img src={project.imgSrc} alt="" />
             </div>
           </div>
         );

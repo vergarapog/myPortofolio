@@ -2,11 +2,12 @@ export const projects = [
   {
     title: "CSS Animations Generator",
     description:
-      "I've faithfully recreated animista.net, a widely-used CSS animation tool, as a demonstration of my frontend development skills and attention to detail. This project showcases my ability to replicate popular web applications, emphasizing my proficiency in creating user-friendly interfaces and interactive web tools. I've added features like tailwind code generation support and a draggable object to enhance the user experience. Explore the project via the link below to witness the capabilities I can bring to your team.",
+      "I've faithfully recreated animista.net, a widely-used CSS animation tool, while enhancing it with additional features like tailwind code generation support and a draggable object. This project serves as a demonstration of my frontend development skills and meticulous attention to detail. It showcases my ability to not only replicate popular web applications but also to innovate and improve user-friendly interfaces and interactive web tools. Explore the project via the link below to witness the capabilities I can bring to your team.",
     links: {
       website: "https://vue-css-animations.netlify.app/",
       github: "",
     },
+    imgSrc: "/assets/projects/animista-clone.png",
   },
 
   {
@@ -17,16 +18,18 @@ export const projects = [
       website: "https://vue-css-animations.netlify.app/",
       github: "",
     },
+    imgSrc: "/assets/projects/rest-countries.png",
   },
 
   {
-    title: "Third Proj",
+    title: "Rock Paper Scissors",
     description:
       "I've successfully recreated the classic Rock, Paper, Scissors game. Users can engage in a thrilling match against the computer while enjoying a responsive interface that adapts to their device's screen size. Additionally, I've implemented interactive hover and focus states for a seamless user experience. Challenge me to a game, and let's see who comes out victorious!",
     links: {
       website: "https://vue-css-animations.netlify.app/",
       github: "",
     },
+    imgSrc: "/assets/projects/rock-paper-scissors.png",
   },
 ];
 
