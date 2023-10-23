@@ -102,6 +102,8 @@
 
       .proj-btn-container {
         display: flex;
+        justify-content: center;
+
         @include mobile {
           justify-content: center;
         }
@@ -167,8 +169,8 @@
             margin: 0.3em;
           }
           cursor: pointer;
-          background-color: crimson;
-          color: #fff;
+          background-color: transparent;
+          color: black;
           letter-spacing: 0.025em;
           border-radius: 20px;
 
@@ -183,11 +185,11 @@
           &::before,
           &::after {
             content: "";
-            border: 3px solid crimson;
+            border: 3px solid $mainColor;
             position: absolute;
             width: calc(100% - 6px);
             height: calc(100% - 6px);
-            border-radius: 20px;
+            border-radius: 30px;
             left: 0;
             bottom: 0;
             z-index: -1;
