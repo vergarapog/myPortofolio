@@ -11,19 +11,7 @@ import { useGlobalContext } from "./context";
 import useElementOnScreen from "./hooks/useElementOnScreen";
 
 function App() {
-  const { setIsNavDark } = useGlobalContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const aboutMeRef = useRef(null)
-  // setIsNavDark(
-  //   useElementOnScreen(
-  //     {
-  //       root: null,
-  //       rootMargin: "0px",
-  //       threshold: 0.7,
-  //     },
-  //     aboutMeRef
-  //   )
-  // )
 
   return (
     <div className="app">
