@@ -2,13 +2,10 @@ import Topbar from "./components/topbar/Topbar";
 import Menu from "./components/menu/Menu";
 import Intro from "./components/intro/Intro";
 import Portofolio from "./components/portofolio/Portofolio";
-import Works from "./components/works/Works";
 import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 import "./app.scss";
-import { useState, useRef } from "react";
-import { useGlobalContext } from "./context";
-import useElementOnScreen from "./hooks/useElementOnScreen";
+import { useState } from "react";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
