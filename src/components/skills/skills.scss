@@ -5,17 +5,28 @@
   background-color: $mainColor;
 
   .container {
-    display: block;
+    display: flex;
     width: 80%;
+    align-items: start;
+    @include mobile {
+      display: block;
+    }
     margin: 0 auto;
     .txt-container {
       display: flex;
+      flex: 1;
       flex-direction: column;
+      gap: 30px;
       justify-content: space-evenly;
       align-items: center;
       color: white;
-      height: 18em;
       text-align: center;
+      margin-bottom: 4em;
+
+      .svg-container {
+        width: 250px;
+        height: 250px;
+      }
 
       h2 {
         font-size: 2rem;
@@ -25,68 +36,143 @@
       }
       p {
         font-size: 1.3rem;
-        width: 60%;
+        width: 90%;
         @include mobile {
           width: 100%;
         }
       }
     }
-    h2 {
-      color: white;
-      text-align: center;
-    }
-    .skills-grid {
-      padding: 1em 0 4em 0;
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-      @include mobile {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    .skill-container {
+      flex: 1;
+
+      h2 {
+        color: white;
+        text-align: center;
       }
-
-      .card {
+      .skills-grid {
+        padding: 1em 0 4em 0;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        background: crimson;
-        font-size: 3rem;
-        color: #fff;
-        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
-          rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-        height: 100%;
-        width: 100%;
-        border-radius: 4px;
-        transition: all 500ms;
-        overflow: hidden;
-        padding: 0.05em;
+        gap: 20px;
+        // gap: 1rem;
+        // grid-template-columns: repeat(4, minmax(150px, 1fr));
 
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        // @include mobile {
+        //   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        // }
 
-        p {
-          text-align: center;
-          padding-top: 0.5em;
-          font-size: 1.5rem;
-          @include mobile {
-            font-size: 1.2rem;
+        .skill-row {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          justify-content: center;
+          .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            background-image: linear-gradient(#15023a, #15023a),
+              radial-gradient(circle at top left, #51a2e9, #ff4d5a);
+            background-clip: content-box, border-box;
+            color: #fff;
+            box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+              rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+            height: 110px;
+            width: 110px;
+
+            border-radius: 4px;
+
+            transition: all 500ms;
+            overflow: hidden;
+            padding: 0.05em;
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            p {
+              text-align: center;
+              padding-top: 0.5em;
+              font-size: 1.2rem;
+              @include mobile {
+                font-size: 1.2rem;
+              }
+            }
+
+            img {
+              width: 70px;
+              height: 70px;
+              @include mobile {
+                width: 70%;
+              }
+            }
+          }
+
+          .card:hover {
+            box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+              rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+            transform: translateY(-3px) scale(1.1);
           }
         }
-
-        img {
-          @include mobile {
-            width: 70%;
-          }
-        }
-      }
-
-      .card:hover {
-        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
-          rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-        transform: translateY(-3px) scale(1.1);
       }
     }
   }
 }
+
+// Old Skill grid css
+//
+// .skills-grid {
+//       padding: 1em 0 4em 0;
+//       display: grid;
+//       gap: 1rem;
+//       grid-template-columns: repeat(4, minmax(150px, 1fr));
+
+//       @include mobile {
+//         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+//       }
+
+//       .card {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         background: crimson;
+//         font-size: 3rem;
+//         color: #fff;
+//         box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+//           rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+//         height: 100%;
+//         width: 100%;
+//         border-radius: 4px;
+//         transition: all 500ms;
+//         overflow: hidden;
+//         padding: 0.05em;
+
+//         background-size: cover;
+//         background-position: center;
+//         background-repeat: no-repeat;
+
+//         p {
+//           text-align: center;
+//           padding-top: 0.5em;
+//           font-size: 1.5rem;
+//           @include mobile {
+//             font-size: 1.2rem;
+//           }
+//         }
+
+//         img {
+//           @include mobile {
+//             width: 70%;
+//           }
+//         }
+//       }
+
+//       .card:hover {
+//         box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+//           rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+//         transform: translateY(-3px) scale(1.1);
+//       }
+//     }

@@ -1,18 +1,18 @@
-import React from "react"
-import "./skills.scss"
-import { useEffect, useRef } from "react"
+import React from "react";
+import "./skills.scss";
+import { useEffect, useRef } from "react";
 
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useGlobalContext } from "../../context"
-import useElementOnScreen from "../../hooks/useElementOnScreen"
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGlobalContext } from "../../context";
+import useElementOnScreen from "../../hooks/useElementOnScreen";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const Testimonials = () => {
-  const { setIsNavDark } = useGlobalContext()
+  const { setIsNavDark } = useGlobalContext();
 
-  const aboutMeRef = useRef(null)
+  const aboutMeRef = useRef(null);
   setIsNavDark(
     useElementOnScreen(
       {
@@ -22,7 +22,7 @@ const Testimonials = () => {
       },
       aboutMeRef
     )
-  )
+  );
 
   useEffect(() => {
     //GSAP Internship animation
@@ -34,7 +34,7 @@ const Testimonials = () => {
         start: "top 55%",
         end: "top 30%",
       },
-    })
+    });
 
     about
       .fromTo(
@@ -91,12 +91,15 @@ const Testimonials = () => {
           stagger: 0.05,
         },
         "<0.1"
-      )
-  }, [])
+      );
+  }, []);
   return (
     <div className="skills" id="skills" ref={aboutMeRef}>
       <div className="container">
         <div className="txt-container">
+          <div className="svg-container">
+            <img src="assets/person.svg" alt="" />
+          </div>
           <h2 className="about-title">About Me</h2>
 
           <p className="about-desc">
@@ -105,49 +108,61 @@ const Testimonials = () => {
             in the browser. Career-wise, I aspire to be a front-end developer.
           </p>
         </div>
-        <h2 className="toolbox-title">My Toolbox</h2>
 
-        <section className="skills-grid">
-          <div className="card">
-            <p>HTML</p>
-            <img src="/assets/skills/html.png" alt="" />
-          </div>
-          <div className="card">
-            <p>CSS</p>
-            <img src="/assets/skills/css.png" alt="" />
-          </div>
-          <div className="card">
-            <p>Sass</p>
-            <img src="/assets/skills/sass.png" alt="" />
-          </div>
-          <div className="card">
-            <p>JavaScript</p>
-            <img src="/assets/skills/js.png" alt="" />
-          </div>
-          <div className="card">
-            <p>ReactJS</p>
-            <img src="/assets/skills/react.png" alt="" />
-          </div>
-          <div className="card">
-            <p>Github</p>
-            <img src="/assets/skills/github.png" alt="" />
-          </div>
-          <div className="card">
-            <p>NPM</p>
-            <img src="/assets/skills/npm.png" alt="" />
-          </div>
-          <div className="card">
-            <p>VS Code</p>
-            <img src="/assets/skills/vscode.png" alt="" />
-          </div>
-          <div className="card">
-            <p>Vue.js</p>
-            <img src="/assets/skills/vue.png" alt="" />
-          </div>
-        </section>
+        <div className="skill-container">
+          {/* <h2 className="toolbox-title">My Toolbox</h2> */}
+          <section className="skills-grid">
+            <div className="skill-row">
+              <div className="card">
+                <p>HTML</p>
+                <img src="/assets/skills/html.png" alt="" />
+              </div>
+              <div className="card">
+                <p>CSS</p>
+                <img src="/assets/skills/css.png" alt="" />
+              </div>
+              <div className="card">
+                <p>Sass</p>
+                <img src="/assets/skills/sass.png" alt="" />
+              </div>
+            </div>
+            <div className="skill-row">
+              <div className="card">
+                <p>JavaScript</p>
+                <img src="/assets/skills/js.png" alt="" />
+              </div>
+              <div className="card">
+                <p>React</p>
+                <img src="/assets/skills/react.png" alt="" />
+              </div>
+              <div className="card">
+                <p>Github</p>
+                <img src="/assets/skills/github.png" alt="" />
+              </div>
+              <div className="card">
+                <p>NPM</p>
+                <img src="/assets/skills/npm.png" alt="" />
+              </div>
+            </div>
+            <div className="skill-row">
+              <div className="card">
+                <p>VS Code</p>
+                <img src="/assets/skills/vscode.png" alt="" />
+              </div>
+              <div className="card">
+                <p>Vue.js</p>
+                <img src="/assets/skills/vue.png" alt="" />
+              </div>
+              <div className="card">
+                <p>ASDD</p>
+                <img src="/assets/skills/vue.png" alt="" />
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;
