@@ -137,45 +137,59 @@ const Portofolio = () => {
                 <p className="proj-desc">{project.description}</p>
               </div>
               <div className="proj-btn-container">
-                <p
+                <a
                   href={project.links.website}
                   className="proj-btn btn"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FaExternalLinkAlt />
                   &nbsp; Website
-                </p>
-                <p href="" className="proj-btn btn" target="_blank">
+                </a>
+                <a
+                  href={project.links.github}
+                  className="proj-btn btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaGithub />
-                  &nbsp; Repo
-                </p>
+                  &nbsp; Github
+                </a>
               </div>
               <ul className="proj-tech">
                 <li className="proj-tech-item">
                   <span className="tech-logo">
-                    {" "}
-                    <FaVuejs />
+                    <img src="assets/skills-svg/react-project.svg" alt="" />
                   </span>
-                  &nbsp; <div className="">Vue</div>
+                  &nbsp; <div className="">React</div>
                 </li>
                 <li className="proj-tech-item">
                   <span className="tech-logo">
-                    <FaHtml5 />
+                    <img src="assets/skills-svg/HTML5.svg" alt="" />
                   </span>
                   &nbsp; <div className="">HTML</div>
                 </li>
                 <li className="proj-tech-item">
                   <span className="tech-logo">
-                    <FaSass />
+                    <img src="assets/skills-svg/tailwind.svg" alt="" />
                   </span>
-                  &nbsp;<div className="">SASS</div>
+                  &nbsp;<div className="">Tailwind</div>
                 </li>
-                <li className="proj-tech-item">
-                  <span className="tech-logo">
-                    <SiJavascript />
-                  </span>
-                  &nbsp;<div className="">JavaScript</div>
-                </li>
+                {project.projectLanguage === "typescript" ? (
+                  <li className="proj-tech-item">
+                    <span className="tech-logo">
+                      <img src="assets/skills-svg/typescript.svg" alt="" />
+                    </span>
+                    &nbsp;<div className="">TypeScript</div>
+                  </li>
+                ) : (
+                  <li className="proj-tech-item">
+                    <span className="tech-logo">
+                      <img src="assets/skills-svg/javascript.svg" alt="" />
+                    </span>
+                    &nbsp;<div className="">JavaScript</div>
+                  </li>
+                )}
               </ul>
             </div>
             <div className="proj-right">

@@ -4,10 +4,11 @@ export const projects = [
     description:
       "I've faithfully recreated Animista.net, a popular CSS animation tool, with added features like Tailwind code generation and a draggable object, demonstrating my front-end skills and attention to detail. Explore the project here to see my capabilities.",
     links: {
-      website: "https://vue-css-animations.netlify.app/",
-      github: "",
+      website: "https://animista-clone.vercel.app/",
+      github: "https://github.com/vergarapog/animista-clone-ts",
     },
     imgSrc: "/assets/projects/animista-clone.png",
+    projectLanguage: "typescript",
   },
 
   {
@@ -15,10 +16,11 @@ export const projects = [
     description:
       "I created a modern, responsive web app that integrates with the REST Countries API, enabling users to explore country data, search, filter by region, and access detailed information, including bordering countries. Dark mode is included for an improved user experience.",
     links: {
-      website: "https://vue-css-animations.netlify.app/",
-      github: "",
+      website: "https://countries-fe-mentor.vercel.app/",
+      github: "https://github.com/vergarapog/restcountries-fe-mentor",
     },
     imgSrc: "/assets/projects/rest-countries.png",
+    projectLanguage: "javascript",
   },
 
   {
@@ -26,10 +28,11 @@ export const projects = [
     description:
       "Enjoy a classic game of Rock, Paper, Scissors with a responsive interface that adapts to different screen sizes. Interactive hover and focus states provide a seamless user experience. Challenge me to a game and see who emerges victorious!",
     links: {
-      website: "https://vue-css-animations.netlify.app/",
-      github: "",
+      website: "https://rockpaperscissors-fe.vercel.app/",
+      github: "https://github.com/vergarapog/rockpaperscissors-fe-mentor",
     },
     imgSrc: "/assets/projects/rock-paper-scissors.png",
+    projectLanguage: "javascript",
   },
 ];
 
