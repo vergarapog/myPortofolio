@@ -103,9 +103,12 @@ const Testimonials = () => {
           <h2 className="about-title">About Me</h2>
 
           <p className="about-desc">
-            I am a 4th year student currently enrolled at iAcademy. I really
-            like to code things from scratch, and enjoy bringing ideas to life
-            in the browser. Career-wise, I aspire to be a front-end developer.
+            Passionate front-end developer dedicated to continuous learning. I'm
+            deeply enthusiastic about JavaScript, React, and the ever-evolving
+            world of web development. I embrace the blend of creativity and
+            logic that fuels my excitement for crafting web solutions. Beyond
+            coding, I enjoy gaming, staying active, and hitting the open road
+            with my motorcycle.
           </p>
         </div>
 
@@ -115,47 +118,47 @@ const Testimonials = () => {
             <div className="skill-row">
               <div className="card">
                 <p>HTML</p>
-                <img src="/assets/skills/html.png" alt="" />
+                <img src="/assets/skills-svg/HTML5.svg" alt="" />
               </div>
               <div className="card">
                 <p>CSS</p>
-                <img src="/assets/skills/css.png" alt="" />
+                <img src="/assets/skills-svg/css.svg" alt="" />
               </div>
               <div className="card">
                 <p>Sass</p>
-                <img src="/assets/skills/sass.png" alt="" />
+                <img src="/assets/skills-svg/sass.svg" alt="" />
               </div>
             </div>
             <div className="skill-row">
               <div className="card">
                 <p>JavaScript</p>
-                <img src="/assets/skills/js.png" alt="" />
+                <img src="/assets/skills-svg/javascript.svg" alt="" />
               </div>
               <div className="card">
                 <p>React</p>
-                <img src="/assets/skills/react.png" alt="" />
+                <img src="/assets/skills-svg/react.svg" alt="" />
               </div>
               <div className="card">
-                <p>Github</p>
-                <img src="/assets/skills/github.png" alt="" />
+                <p>Vue</p>
+                <img src="/assets/skills-svg/vue.svg" alt="" />
               </div>
               <div className="card">
-                <p>NPM</p>
-                <img src="/assets/skills/npm.png" alt="" />
+                <p>Redux</p>
+                <img src="/assets/skills-svg/redux.svg" alt="" />
               </div>
             </div>
             <div className="skill-row">
               <div className="card">
-                <p>VS Code</p>
-                <img src="/assets/skills/vscode.png" alt="" />
+                <p>Git</p>
+                <img src="/assets/skills-svg/git.svg" alt="" />
               </div>
               <div className="card">
-                <p>Vue.js</p>
-                <img src="/assets/skills/vue.png" alt="" />
+                <p>Tailwind</p>
+                <img src="/assets/skills-svg/tailwind.svg" alt="" />
               </div>
               <div className="card">
-                <p>ASDD</p>
-                <img src="/assets/skills/vue.png" alt="" />
+                <p>Vite</p>
+                <img src="/assets/skills-svg/vite.svg" alt="" />
               </div>
             </div>
           </section>

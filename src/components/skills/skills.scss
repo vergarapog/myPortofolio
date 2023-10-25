@@ -3,6 +3,7 @@
 
 .skills {
   background-color: $mainColor;
+  padding: 7em 0;
 
   .container {
     display: flex;
@@ -37,6 +38,8 @@
       p {
         font-size: 1.3rem;
         width: 90%;
+        text-align: left;
+        line-height: 1.5;
         @include mobile {
           width: 100%;
         }
