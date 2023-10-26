@@ -107,8 +107,8 @@ const Testimonials = () => {
             deeply enthusiastic about JavaScript, React, and the ever-evolving
             world of web development. I embrace the blend of creativity and
             logic that fuels my excitement for crafting web solutions. Beyond
-            coding, I enjoy gaming, staying active, and hitting the open road
-            with my motorcycle.
+            coding, I enjoy gaming, working out, and hitting the open road with
+            my motorcycle.
           </p>
         </div>
 
