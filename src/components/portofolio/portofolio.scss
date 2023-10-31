@@ -5,6 +5,23 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  &.dark-mode {
+    color: white;
+
+    &::after {
+      position: absolute;
+      content: "";
+      border-bottom: 18px solid #ff4d5a;
+      width: 10.5rem;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      left: 3rem;
+      top: -1rem;
+      z-index: -1;
+    }
+  }
 }
 
 .portofolio {
@@ -12,6 +29,10 @@
   flex-direction: column;
   align-items: center;
   padding: 3em 0;
+
+  &.dark-mode {
+    background-color: $mainColor;
+  }
 
   h1 {
     text-align: center;

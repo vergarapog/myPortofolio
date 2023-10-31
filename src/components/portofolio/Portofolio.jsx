@@ -15,11 +15,14 @@ import {
 import { SiJavascript } from "react-icons/si";
 
 import { projects } from "./ProjectsList";
+import { useGlobalContext } from "../../context";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Portofolio = () => {
   const projectRefs = useRef([]);
+
+  const { isDarkMode } = useGlobalContext();
 
   useEffect(() => {
     projectRefs.current.forEach((project, index) => {
@@ -118,8 +121,13 @@ const Portofolio = () => {
   }, []);
 
   return (
-    <div className="portofolio" id="portofolio">
-      <h1 className="gradient-text">Projects</h1>
+    <div
+      className={`portofolio ${isDarkMode ? "dark-mode" : ""}`}
+      id="portofolio"
+    >
+      <h1 className={`gradient-text ${isDarkMode ? "dark-mode" : ""}`}>
+        Projects
+      </h1>
 
       {projects.map((project, index) => {
         return (

@@ -7,7 +7,7 @@ export const projects = [
       website: "https://animista-clone.vercel.app/",
       github: "https://github.com/vergarapog/animista-clone-ts",
     },
-    imgSrc: "/assets/projects/animista-clone.png",
+    imgSrc: "/assets/projects/animista-clone-png.png",
     projectLanguage: "typescript",
   },
 
