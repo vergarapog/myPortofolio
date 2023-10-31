@@ -1,14 +1,14 @@
-import React from "react"
-import { useEffect, useRef } from "react"
-import "./topbar.scss"
-import { Person, Mail } from "@material-ui/icons"
-import { gsap } from "gsap"
-import { useGlobalContext } from "../../context"
+import React from "react";
+import { useEffect, useRef } from "react";
+import "./topbar.scss";
+import { Person, Mail } from "@material-ui/icons";
+import { gsap } from "gsap";
+import { useGlobalContext } from "../../context";
 
 const Topbar = ({ menuValue, setMenu }) => {
-  const topbarRef = useRef()
+  const topbarRef = useRef();
 
-  const { isNavDark } = useGlobalContext()
+  const { isNavDark } = useGlobalContext();
 
   useEffect(() => {
     gsap.from(topbarRef.current, {
@@ -17,8 +17,8 @@ const Topbar = ({ menuValue, setMenu }) => {
       ease: "bounce",
       delay: 3,
       opacity: 0,
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div
@@ -40,7 +40,7 @@ const Topbar = ({ menuValue, setMenu }) => {
           </div>
           <div className="item-container">
             <Mail className="icon" />
-            <span>201801166@iacademy.edu.ph</span>
+            <span>vbrian.dev@gmail.com</span>
           </div>
         </div>
         <div className="right">
@@ -52,7 +52,7 @@ const Topbar = ({ menuValue, setMenu }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Topbar
+export default Topbar;
