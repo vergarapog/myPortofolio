@@ -35,7 +35,10 @@
 
     form {
       width: 70%;
-      height: 70%;
+      height: 50%;
+      @include mobile {
+        height: 90%;
+      }
       display: flex;
       flex-direction: column;
       // justify-content: space-around;
