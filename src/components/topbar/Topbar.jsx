@@ -31,7 +31,7 @@ const Topbar = ({ menuValue, setMenu }) => {
     >
       <div className="wrapper" ref={topbarRef}>
         <div className="left">
-          <a href="#works" className="logo">
+          <a href="#intro" className="logo">
             Brian.
           </a>
           <div className="item-container">
