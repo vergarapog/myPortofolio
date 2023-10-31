@@ -14,7 +14,7 @@ export const projects = [
   {
     title: "REST Countries API with Dark Mode",
     description:
-      "I created a modern, responsive web app based on a challenge from FrontentMentor. It integrates with the REST Countries API, enabling users to explore country data, search, filter by region, and access detailed information, including bordering countries. Dark mode is included for an improved user experience.",
+      "I created a modern, responsive web app based on a challenge from FrontendMentor. It integrates with the REST Countries API, enabling users to explore country data, search, filter by region, and access detailed information, including bordering countries. Dark mode is included for an improved user experience.",
     links: {
       website: "https://countries-fe-mentor.vercel.app/",
       github: "https://github.com/vergarapog/restcountries-fe-mentor",
