@@ -19,7 +19,6 @@ const Intro = () => {
   let nameRef = useRef();
   let jobRef = useRef();
 
-  console.log(container);
   useEffect(() => {
     init(textRef.current, {
       showCursor: false,
