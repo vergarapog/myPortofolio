@@ -9,10 +9,10 @@ const Contact = () => {
     setMessage(true);
     emailjs
       .sendForm(
-        "gmail",
-        "template_ummtl6k",
+        "service_iq2bx9e",
+        "template_r1a9as2",
         e.target,
-        "user_Qo0WHk53vZvhlnybCaXUy"
+        "GxTpmqEVokddvyHYL"
       )
       .then(
         (result) => {
@@ -31,9 +31,23 @@ const Contact = () => {
       </div>
       <div className="right">
         <h2>Contact.</h2>
+        <p>
+          Have a question or want to work together? Leave your details and I'll
+          get back to you as soon as possible.
+        </p>
         <form onSubmit={handleSubmit}>
-          <input type="email" name="email" id="" placeholder="Email" required />
-          <textarea placeholder="Message" name="message" required></textarea>
+          <input
+            type="email"
+            name="from_name"
+            id=""
+            placeholder="Your E-mail"
+            required
+          />
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            required
+          ></textarea>
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>

@@ -41,7 +41,7 @@ const Topbar = ({ menuValue, setMenu }) => {
     >
       <div className="wrapper" ref={topbarRef}>
         <div className="left">
-          <a href="#works" className="logo">
+          <a href="#intro" className="logo">
             Brian.
           </a>
           <div className="item-container">
@@ -50,7 +50,7 @@ const Topbar = ({ menuValue, setMenu }) => {
           </div>
           <div className="item-container">
             <Mail className="icon" />
-            <span>201801166@iacademy.edu.ph</span>
+            <span>vbrian.dev@gmail.com</span>
           </div>
         </div>
         <div className="right">

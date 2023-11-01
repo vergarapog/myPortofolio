@@ -27,19 +27,30 @@
     h2 {
       font-size: 2.5rem;
     }
+
+    p {
+      margin-top: 1em;
+      width: 20em;
+    }
+
     form {
       width: 70%;
-      height: 70%;
+      height: 50%;
+      @include mobile {
+        height: 90%;
+      }
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      // justify-content: space-around;
       align-items: center;
 
       input {
         width: 20em;
         height: 2.5em;
         font-size: 1rem;
+        margin-top: 1em;
         @include mobile {
+          margin-top: 1em;
           width: 13em;
           height: 1.5em;
         }
@@ -49,7 +60,11 @@
         height: 18em;
         font-size: 1rem;
         resize: none;
+        margin-top: 1em;
+
         @include mobile {
+          margin-top: 1em;
+
           width: 13em;
           height: 6em;
         }
@@ -62,9 +77,12 @@
         border: none;
         border-radius: 10px;
         cursor: pointer;
+        margin-top: 3em;
       }
 
       span {
+        margin-top: 3em;
+
         font-weight: 600;
         color: green;
       }

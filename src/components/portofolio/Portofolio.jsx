@@ -134,6 +134,7 @@ const Portofolio = () => {
           <div
             className={`project ${index === 1 && "flex-reverse-row"}`}
             ref={(el) => (projectRefs.current[index] = el)}
+            key={project.title}
           >
             <div className="proj-left">
               <h3 className="proj-num">

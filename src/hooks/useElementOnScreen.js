@@ -1,29 +1,29 @@
-import { useState, useRef, useMemo, useEffect } from "react"
+import { useState, useRef, useMemo, useEffect } from "react";
 
 const useElementOnScreen = (options, targetRef) => {
-  const [isVisible, setIsVisible] = useState(null)
+  const [isVisible, setIsVisible] = useState(null);
 
   const callbackFunc = (entries) => {
-    const [entry] = entries
-    setIsVisible(entry.isIntersecting)
-  }
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
 
   const optionsMemo = useMemo(() => {
-    return options
-  }, [options])
+    return options;
+  }, [options]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(callbackFunc, optionsMemo)
-    const currentTarget = targetRef.current
-    console.log(targetRef.current)
-    if (currentTarget) observer.observe(currentTarget)
+    const observer = new IntersectionObserver(callbackFunc, optionsMemo);
+    const currentTarget = targetRef.current;
+    // console.log(targetRef.current)
+    if (currentTarget) observer.observe(currentTarget);
 
     return () => {
-      if (currentTarget) observer.unobserve(currentTarget)
-    }
-  }, [targetRef, optionsMemo])
+      if (currentTarget) observer.unobserve(currentTarget);
+    };
+  }, [targetRef, optionsMemo]);
 
-  return isVisible
-}
+  return isVisible;
+};
 
-export default useElementOnScreen
+export default useElementOnScreen;

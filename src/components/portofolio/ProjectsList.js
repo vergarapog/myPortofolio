@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "CSS Animations Generator",
     description:
-      "I've faithfully recreated Animista.net, a popular CSS animation tool, with added features like Tailwind code generation and a draggable object, demonstrating my front-end skills and attention to detail. Explore the project here to see my capabilities.",
+      "I've faithfully recreated Animista.net, a popular CSS animation tool, and expanded it with features like Tailwind code generation and a draggable object. Explore the project through the link below to witness how these enhancements showcase my front-end skills and attention to detail.",
     links: {
       website: "https://animista-clone.vercel.app/",
       github: "https://github.com/vergarapog/animista-clone-ts",
@@ -14,7 +14,7 @@ export const projects = [
   {
     title: "REST Countries API with Dark Mode",
     description:
-      "I created a modern, responsive web app that integrates with the REST Countries API, enabling users to explore country data, search, filter by region, and access detailed information, including bordering countries. Dark mode is included for an improved user experience.",
+      "I created a modern, responsive web app based on a challenge from FrontendMentor. It integrates with the REST Countries API, enabling users to explore country data, search, filter by region, and access detailed information, including bordering countries. Dark mode is included for an improved user experience.",
     links: {
       website: "https://countries-fe-mentor.vercel.app/",
       github: "https://github.com/vergarapog/restcountries-fe-mentor",
@@ -26,7 +26,7 @@ export const projects = [
   {
     title: "Rock Paper Scissors",
     description:
-      "Enjoy a classic game of Rock, Paper, Scissors with a responsive interface that adapts to different screen sizes. Interactive hover and focus states provide a seamless user experience. Challenge me to a game and see who emerges victorious!",
+      "Enjoy a classic game of Rock, Paper, Scissors with a responsive interface inspired by a FrontendMentor challenge. The design adapts to different screen sizes. Interactive hover and focus states provide a seamless user experience. Challenge me to a game and see who emerges victorious!",
     links: {
       website: "https://rockpaperscissors-fe.vercel.app/",
       github: "https://github.com/vergarapog/rockpaperscissors-fe-mentor",
