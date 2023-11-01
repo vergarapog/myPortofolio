@@ -5,14 +5,14 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
+  z-index: 1;
   &.dark-mode {
     color: white;
 
     &::after {
       position: absolute;
       content: "";
-      border-bottom: 18px solid #ff4d5a;
+      border-bottom: 18px solid crimson;
       width: 10.5rem;
       display: block;
       margin: 0 auto;
@@ -73,6 +73,9 @@
 
       .proj-num {
         font-size: 2rem;
+        &.dark-mode {
+          color: white;
+        }
         .proj-num-color {
           color: crimson;
         }
@@ -83,8 +86,9 @@
 
       .proj-title {
         color: $mainColor;
-        // color: #fff;
-
+        &.dark-mode {
+          color: white;
+        }
         font-size: 3rem;
         @include mobile {
           font-size: 2.2rem;
@@ -96,6 +100,9 @@
         flex-direction: column;
         justify-content: center;
         background-color: $mainColor;
+        &.dark-mode {
+          background-color: #9a0419;
+        }
         padding: 1.5em 3em 1.5em 1.5em;
         border-radius: 10px;
         color: white;
@@ -192,6 +199,9 @@
           cursor: pointer;
           background-color: transparent;
           color: black;
+          &.dark-mode {
+            color: white;
+          }
           letter-spacing: 0.025em;
           border-radius: 20px;
 
@@ -217,6 +227,22 @@
             transition: all 0.3s ease;
           }
 
+          &.dark-mode {
+            &::before,
+            &::after {
+              content: "";
+              border: 3px solid white;
+              position: absolute;
+              width: calc(100% - 6px);
+              height: calc(100% - 6px);
+              border-radius: 30px;
+              left: 0;
+              bottom: 0;
+              z-index: -1;
+              transition: all 0.3s ease;
+            }
+          }
+
           &:hover {
             background-color: transparent;
             color: black;
@@ -239,6 +265,32 @@
           &:hover::after {
             transform: translate(5px, 5px);
             border: 3px solid #000;
+          }
+
+          &.dark-mode {
+            &:hover {
+              background-color: transparent;
+              color: white;
+              // animation: vibrate-3 0.4s linear 0s 1 normal both;
+              // text-decoration: line-through;
+
+              // animation: btnLink 3s infinite;
+              // @keyframes btnLink {
+              //   100% {
+              //     box-shadow: inset 15em 0 0 0 lightgreen;
+              //   }
+              // }
+            }
+
+            &:hover::before {
+              transform: translate(-5px, -5px);
+
+              border: 3px solid white;
+            }
+            &:hover::after {
+              transform: translate(5px, 5px);
+              border: 3px solid white;
+            }
           }
         }
       }
@@ -290,6 +342,9 @@
           }
           border-radius: 20px;
           color: black;
+          &.dark-mode {
+            color: white;
+          }
           margin-right: 1em;
           @include mobile {
             margin: 0.2em;

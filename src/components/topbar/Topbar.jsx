@@ -26,8 +26,6 @@ const Topbar = ({ menuValue, setMenu }) => {
     setIsDarkMode((prev) => !prev);
   };
 
-  console.log(isDarkMode);
-
   return (
     <div
       className={
