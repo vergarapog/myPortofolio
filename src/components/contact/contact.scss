@@ -4,11 +4,17 @@
   background-color: white;
   display: flex;
 
+  &.dark-mode {
+    background-color: $mainColor;
+  }
+
   @include mobile {
     flex-direction: column;
   }
 
   .left {
+    display: flex;
+    justify-content: center;
     flex: 1;
     overflow: hidden;
     img {
@@ -23,6 +29,14 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
+    @include mobile {
+      padding-top: 2em;
+    }
+
+    &.dark-mode {
+      color: white;
+    }
 
     h2 {
       font-size: 2.5rem;
@@ -61,6 +75,7 @@
         font-size: 1rem;
         resize: none;
         margin-top: 1em;
+        padding: 1em;
 
         @include mobile {
           margin-top: 1em;
@@ -94,6 +109,10 @@
       left: 80%;
       align-self: flex-end;
       transform: rotateX(180deg);
+
+      &.dark-mode {
+        color: white;
+      }
 
       @include mobile {
         bottom: 1.5em;
