@@ -13,13 +13,20 @@
       position: absolute;
       content: "";
       border-bottom: 18px solid crimson;
+
       width: 10.5rem;
+
       display: block;
       margin: 0 auto;
       position: relative;
       left: 3rem;
       top: -1rem;
       z-index: -1;
+      @include mobile {
+        left: 2rem;
+
+        width: 7.5rem;
+      }
     }
   }
 }
