@@ -1,10 +1,16 @@
 import React from "react";
 import "./menu.scss";
+import { useGlobalContext } from "../../context";
 
-const menu = ({ menuValue, setMenu }) => {
+const Menu = ({ menuValue, setMenu }) => {
+  const { isDarkMode } = useGlobalContext();
   return (
-    <div className={"menu " + (menuValue && "active")}>
-      <ul>
+    <div
+      className={
+        "menu " + (menuValue && "active") + " " + (isDarkMode && "dark-mode")
+      }
+    >
+      <ul className={`${isDarkMode ? "dark-mode" : ""}`}>
         <li className="menu-item" onClick={() => setMenu(!menuValue)}>
           <a href="#intro">Home</a>
         </li>
@@ -27,4 +33,4 @@ const menu = ({ menuValue, setMenu }) => {
   );
 };
 
-export default menu;
+export default Menu;

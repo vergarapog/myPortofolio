@@ -16,6 +16,10 @@
 
   &.active {
     right: 0;
+
+    &.dark-mode {
+      background-color: #61000c;
+    }
   }
 
   ul {
@@ -26,12 +30,18 @@
     color: white;
     font-weight: 300;
 
+    // &.dark-mode {
+    //   color: $mainColor;
+    // }
+
     width: 80%;
     .menu-item {
       margin: 0 0 1.5em 0;
       transition: all 0.3s ease;
       padding: 0 0.4em 0 0.4em;
       line-height: 2em;
+      border-radius: 5px;
+
       a {
         display: block;
         width: 100%;
