@@ -3,6 +3,7 @@
 .contact {
   background-color: white;
   display: flex;
+  transition-duration: 200ms;
 
   &.dark-mode {
     background-color: $mainColor;
