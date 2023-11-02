@@ -6,9 +6,22 @@ import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 import "./app.scss";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useGlobalContext } from "./context";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  //Color scheme will be dark mode if requested by user's system
+  const { setIsDarkMode } = useGlobalContext();
+  useEffect(() => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setIsDarkMode(true);
+    }
+  }, []);
 
   return (
     <div className="app">
