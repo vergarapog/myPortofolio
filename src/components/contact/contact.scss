@@ -4,6 +4,7 @@
   background-color: white;
   display: flex;
   transition-duration: 200ms;
+  padding: 5em 0;
 
   &.dark-mode {
     background-color: $mainColor;
