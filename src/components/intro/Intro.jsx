@@ -6,8 +6,10 @@ import lottie from "lottie-web";
 import { SvgIcon } from "@material-ui/core";
 
 import { gsap, Power3 } from "gsap";
+import { useGlobalContext } from "../../context";
 
 const Intro = () => {
+  const { isDarkMode } = useGlobalContext();
   const textRef = useRef();
   const container = useRef(null);
 
@@ -142,7 +144,7 @@ const Intro = () => {
     );
   }, []);
   return (
-    <div className="intro" id="intro">
+    <div className={`intro ${isDarkMode && "dark-mode"}`} id="intro">
       <div className="left">
         <div className="imgContainer" ref={circle}>
           {/* <img src="assets/frontend.png" alt="" /> */}
@@ -151,10 +153,14 @@ const Intro = () => {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2 ref={titleRef}>Hi There, I'm</h2>
-          <h1 ref={nameRef}>Brian Vergara</h1>
+          <h2 className={`${isDarkMode && "dark-mode"}`} ref={titleRef}>
+            Hi There, I'm
+          </h2>
+          <h1 className={`${isDarkMode && "dark-mode"}`} ref={nameRef}>
+            Brian Vergara
+          </h1>
 
-          <h3 ref={jobRef}>
+          <h3 className={`${isDarkMode && "dark-mode"}`} ref={jobRef}>
             <span ref={textRef}></span> Front-End Developer
           </h3>
 
@@ -175,7 +181,7 @@ const Intro = () => {
               <a
                 href="https://github.com/vergarapog"
                 target="_blank"
-                className="btn btn-1"
+                className={`btn btn-1 ${isDarkMode && "dark-mode"}`}
               >
                 My Github
               </a>
@@ -193,7 +199,11 @@ const Intro = () => {
         </div>
 
         <a className="bottom" href="#portofolio">
-          <img src="assets/down.png" alt="" />
+          {isDarkMode ? (
+            <img src="assets/down-white.png" alt="" />
+          ) : (
+            <img src="assets/down.png" alt="" />
+          )}
         </a>
       </div>
     </div>

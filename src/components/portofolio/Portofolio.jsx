@@ -5,21 +5,17 @@ import "./portofolio.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import {
-  FaGithub,
-  FaExternalLinkAlt,
-  FaVuejs,
-  FaHtml5,
-  FaSass,
-} from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import { projects } from "./ProjectsList";
+import { useGlobalContext } from "../../context";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Portofolio = () => {
   const projectRefs = useRef([]);
+
+  const { isDarkMode } = useGlobalContext();
 
   useEffect(() => {
     projectRefs.current.forEach((project, index) => {
@@ -118,8 +114,13 @@ const Portofolio = () => {
   }, []);
 
   return (
-    <div className="portofolio" id="portofolio">
-      <h1 className="gradient-text">Projects</h1>
+    <div
+      className={`portofolio ${isDarkMode ? "dark-mode" : ""}`}
+      id="portofolio"
+    >
+      <h1 className={`gradient-text ${isDarkMode ? "dark-mode" : ""}`}>
+        Projects
+      </h1>
 
       {projects.map((project, index) => {
         return (
@@ -129,18 +130,22 @@ const Portofolio = () => {
             key={project.title}
           >
             <div className="proj-left">
-              <h3 className="proj-num">
+              <h3 className={`proj-num ${isDarkMode ? "dark-mode" : ""}`}>
                 No.
                 <span className="proj-num-color">0{index + 1}</span>
               </h3>
-              <h2 className="proj-title">{project.title}</h2>
-              <div className="proj-container">
+              <h2 className={`proj-title ${isDarkMode ? "dark-mode" : ""}`}>
+                {project.title}
+              </h2>
+              <div
+                className={`proj-container ${isDarkMode ? "dark-mode" : ""}`}
+              >
                 <p className="proj-desc">{project.description}</p>
               </div>
               <div className="proj-btn-container">
                 <a
                   href={project.links.website}
-                  className="proj-btn btn"
+                  className={`proj-btn btn ${isDarkMode ? "dark-mode" : ""}`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -149,7 +154,7 @@ const Portofolio = () => {
                 </a>
                 <a
                   href={project.links.github}
-                  className="proj-btn btn"
+                  className={`proj-btn btn ${isDarkMode ? "dark-mode" : ""}`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -158,33 +163,47 @@ const Portofolio = () => {
                 </a>
               </div>
               <ul className="proj-tech">
-                <li className="proj-tech-item">
+                <li
+                  className={`proj-tech-item ${isDarkMode ? "dark-mode" : ""}`}
+                >
                   <span className="tech-logo">
                     <img src="assets/skills-svg/react-project.svg" alt="" />
                   </span>
                   &nbsp; <div className="">React</div>
                 </li>
-                <li className="proj-tech-item">
+                <li
+                  className={`proj-tech-item ${isDarkMode ? "dark-mode" : ""}`}
+                >
                   <span className="tech-logo">
                     <img src="assets/skills-svg/HTML5.svg" alt="" />
                   </span>
                   &nbsp; <div className="">HTML</div>
                 </li>
-                <li className="proj-tech-item">
+                <li
+                  className={`proj-tech-item ${isDarkMode ? "dark-mode" : ""}`}
+                >
                   <span className="tech-logo">
                     <img src="assets/skills-svg/tailwind.svg" alt="" />
                   </span>
                   &nbsp;<div className="">Tailwind</div>
                 </li>
                 {project.projectLanguage === "typescript" ? (
-                  <li className="proj-tech-item">
+                  <li
+                    className={`proj-tech-item ${
+                      isDarkMode ? "dark-mode" : ""
+                    }`}
+                  >
                     <span className="tech-logo">
                       <img src="assets/skills-svg/typescript.svg" alt="" />
                     </span>
                     &nbsp;<div className="">TypeScript</div>
                   </li>
                 ) : (
-                  <li className="proj-tech-item">
+                  <li
+                    className={`proj-tech-item ${
+                      isDarkMode ? "dark-mode" : ""
+                    }`}
+                  >
                     <span className="tech-logo">
                       <img src="assets/skills-svg/javascript.svg" alt="" />
                     </span>

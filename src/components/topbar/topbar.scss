@@ -11,6 +11,11 @@
   z-index: 5;
   transition: all 0.4s ease;
 
+  &.dark-mode {
+    background-color: $mainColor;
+    color: white;
+  }
+
   scrollbar-width: none; /// hide scrollbar for firefox
   &::-webkit-scrollbar {
     //hide scrollbar for other browsers
@@ -56,6 +61,24 @@
     }
 
     .right {
+      display: flex;
+      align-items: center;
+      .darkmode-container {
+        cursor: pointer;
+        margin-right: 1em;
+        display: flex;
+        align-items: center;
+        border: 2px solid $mainColor;
+        &.dark-mode {
+          border: 2px solid white;
+        }
+        padding: 0.25em 0.45em;
+        border-radius: 30px;
+        span {
+          user-select: none;
+          font-weight: bold;
+        }
+      }
       .hamburger {
         scrollbar-width: none; /// hide scrollbar for firefox
         &::-webkit-scrollbar {
@@ -75,6 +98,10 @@
           background-color: $mainColor;
           transform-origin: left;
           transition: all 1s ease;
+
+          &.dark-mode {
+            background-color: white;
+          }
         }
       }
     }

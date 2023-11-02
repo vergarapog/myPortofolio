@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./contact.scss";
 import emailjs from "emailjs-com";
+import { useGlobalContext } from "../../context";
 
 const Contact = () => {
+  const { isDarkMode } = useGlobalContext();
+
   const [message, setMessage] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,11 +28,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact" id="contact">
+    <div className={`contact ${isDarkMode ? "dark-mode" : ""}`} id="contact">
       <div className="left">
-        <img src="assets/shake.svg" alt="" />
+        {isDarkMode ? (
+          <img src="assets/undraw.svg" alt="" />
+        ) : (
+          <img src="assets/shake.svg" alt="" />
+        )}
       </div>
-      <div className="right">
+      <div className={`right ${isDarkMode ? "dark-mode" : ""}`}>
         <h2>Contact.</h2>
         <p>
           Have a question or want to work together? Leave your details and I'll
@@ -52,7 +59,7 @@ const Contact = () => {
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>
 
-        <a className="bottom" href="#intro">
+        <a className={`bottom ${isDarkMode ? "dark-mode" : ""}`} href="#intro">
           <img src="assets/down.png" alt="" />
         </a>
       </div>
