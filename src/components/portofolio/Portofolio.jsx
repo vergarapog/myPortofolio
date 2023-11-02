@@ -5,14 +5,7 @@ import "./portofolio.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import {
-  FaGithub,
-  FaExternalLinkAlt,
-  FaVuejs,
-  FaHtml5,
-  FaSass,
-} from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import { projects } from "./ProjectsList";
 import { useGlobalContext } from "../../context";
