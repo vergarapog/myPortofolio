@@ -21,8 +21,8 @@ function App() {
     ) {
       setIsDarkMode(true);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     // no dependencies to ensure this effect only runs once on load
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
