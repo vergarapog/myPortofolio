@@ -1,0 +1,40 @@
+@import "../../global.scss";
+
+.scroll-to-top {
+  .bottom {
+    position: fixed;
+    bottom: 2em;
+    left: 80%;
+    align-self: flex-end;
+    transform: rotateX(180deg);
+
+    display: none;
+
+    &.visibile {
+      display: block;
+    }
+
+    &.dark-mode {
+      color: white;
+    }
+
+    @include mobile {
+      bottom: 1.5em;
+    }
+
+    img {
+      width: 3em;
+      //   animation: arrowBlink 0.8s infinite alternate;
+      @include mobile {
+        width: 2em;
+      }
+    }
+
+    //   @keyframes arrowBlink {
+    //     100% {
+    //       opacity: 0;
+    //       transform: scale(1);
+    //     }
+    //   }
+  }
+}

@@ -8,6 +8,7 @@ import "./app.scss";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useGlobalContext } from "./context";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +43,7 @@ function App() {
           {/* <div className="spacer layer1 flip"></div> */}
         </div>
         <Contact />
+        <ScrollToTop />
       </div>
     </div>
   );
