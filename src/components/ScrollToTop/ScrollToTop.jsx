@@ -9,7 +9,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 300) {
         setIsVisible(true);
         console.log(isVisible);
       } else {
@@ -22,6 +22,7 @@ const ScrollToTop = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -32,7 +33,7 @@ const ScrollToTop = () => {
         }`}
         href="#intro"
       >
-        <img src="assets/down.png" alt="" />
+        <img src="assets/down-white.png" alt="" />
       </a>
     </div>
   );

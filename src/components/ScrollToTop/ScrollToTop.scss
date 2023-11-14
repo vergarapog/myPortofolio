@@ -4,18 +4,22 @@
   .bottom {
     position: fixed;
     bottom: 2em;
-    left: 80%;
+    right: 2em;
     align-self: flex-end;
     transform: rotateX(180deg);
+    background-color: #dc143c;
+    border-radius: 50%;
+    padding: 0.8rem;
+    transition: all 400ms;
 
     display: none;
 
-    &.visibile {
+    &.visible {
       display: block;
     }
 
-    &.dark-mode {
-      color: white;
+    &:hover {
+      transform: scale(1.1) rotateX(180deg);
     }
 
     @include mobile {
