@@ -58,10 +58,6 @@ const Contact = () => {
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>
-
-        <a className={`bottom ${isDarkMode ? "dark-mode" : ""}`} href="#intro">
-          <img src="assets/down.png" alt="" />
-        </a>
       </div>
     </div>
   );

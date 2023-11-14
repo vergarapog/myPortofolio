@@ -1,0 +1,44 @@
+@import "../../global.scss";
+
+.scroll-to-top {
+  .bottom {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    align-self: flex-end;
+    transform: rotateX(180deg);
+    background-color: #dc143c;
+    border-radius: 50%;
+    padding: 0.8rem;
+    transition: all 400ms;
+
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+
+    &:hover {
+      transform: scale(1.1) rotateX(180deg);
+    }
+
+    @include mobile {
+      bottom: 1.5em;
+    }
+
+    img {
+      width: 3em;
+      //   animation: arrowBlink 0.8s infinite alternate;
+      @include mobile {
+        width: 2em;
+      }
+    }
+
+    //   @keyframes arrowBlink {
+    //     100% {
+    //       opacity: 0;
+    //       transform: scale(1);
+    //     }
+    //   }
+  }
+}
