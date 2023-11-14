@@ -43,8 +43,8 @@ function App() {
           {/* <div className="spacer layer1 flip"></div> */}
         </div>
         <Contact />
-        <ScrollToTop />
       </div>
+      <ScrollToTop />
     </div>
   );
 }
