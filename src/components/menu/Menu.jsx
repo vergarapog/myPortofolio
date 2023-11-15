@@ -24,8 +24,23 @@ const Menu = ({ menuValue, setMenu }) => {
           <a href="#contact">Contact</a>
         </li>
         <li className="menu-item" onClick={() => setMenu(!menuValue)}>
-          <a href="https://github.com/vergarapog/myPortofolio" target="_blank">
-            My Website's Code
+          <a
+            href="https://drive.google.com/file/d/1kK8_ZKfcuBNWYDwF8tTw0Cn5Fe6Kdw8p/view?usp=drive_link"
+            target="_blank"
+            rel="noreferrer"
+            className="docu-links"
+          >
+            My Resume
+          </a>
+        </li>
+        <li className="menu-item" onClick={() => setMenu(!menuValue)}>
+          <a
+            href="https://github.com/vergarapog"
+            target="_blank"
+            rel="noreferrer"
+            className="docu-links"
+          >
+            My Github
           </a>
         </li>
       </ul>

@@ -182,6 +182,7 @@ const Intro = () => {
                 href="https://github.com/vergarapog"
                 target="_blank"
                 className={`btn btn-1 ${isDarkMode && "dark-mode"}`}
+                rel="noreferrer"
               >
                 My Github
               </a>
@@ -191,6 +192,7 @@ const Intro = () => {
                 className="btn btn-1 crimson-btn"
                 href="https://drive.google.com/file/d/1kK8_ZKfcuBNWYDwF8tTw0Cn5Fe6Kdw8p/view?usp=drive_link"
                 target="_blank"
+                rel="noreferrer"
               >
                 My Resume
               </a>
