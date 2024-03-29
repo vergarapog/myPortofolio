@@ -17,6 +17,11 @@ body {
 .app {
   height: 100vh;
 
+  &.dark-mode {
+    background-color: $mainColor;
+    color: white;
+  }
+
   .spacer {
     aspect-ratio: 1000/200;
     width: 100%;
