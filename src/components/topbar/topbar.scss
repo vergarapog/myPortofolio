@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   z-index: 5;
-  transition: all 0.4s ease;
+  transition: all 0.6s ease;
 
   &.dark-mode {
     background-color: $mainColor;
