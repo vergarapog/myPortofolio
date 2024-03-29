@@ -14,7 +14,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   //Color scheme will be dark mode if requested by user's system
-  const { setIsDarkMode } = useGlobalContext();
+  const { setIsDarkMode, isDarkMode } = useGlobalContext();
   useEffect(() => {
     if (
       window.matchMedia &&
@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <div className={"app " + (isDarkMode && "dark-mode")}>
       <Topbar menuValue={isMenuOpen} setMenu={setIsMenuOpen} />
       <Menu menuValue={isMenuOpen} setMenu={setIsMenuOpen} />
       <div className="sections">
