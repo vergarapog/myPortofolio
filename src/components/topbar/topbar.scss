@@ -92,6 +92,10 @@
         justify-content: space-between;
         cursor: pointer;
 
+        &:active {
+          transform: scale(110%);
+        }
+
         span {
           width: 100%;
           height: 0.17em;
@@ -107,33 +111,38 @@
     }
   }
 
-  &.active {
-    background-color: $mainColor;
-    color: white;
+  // &.active {
+  // background-color: $mainColor;
+  // color: white;
 
-    .hamburger {
-      scrollbar-width: none; /// hide scrollbar for firefox
-      &::-webkit-scrollbar {
-        //hide scrollbar for other browsers
-        display: none;
-      }
+  // &.dark-mode {
+  //   background-color: #61000c;
+  //   color: white;
+  // }
 
-      span {
-        &:first-child {
-          background-color: white;
-          transform: rotate(44deg);
-        }
-        &:nth-child(2) {
-          opacity: 0;
-          // background-color: lightcoral;
-        }
-        &:last-child {
-          background-color: white;
-          transform: rotate(-44deg);
-        }
-      }
-    }
-  }
+  // .hamburger {
+  //   scrollbar-width: none; /// hide scrollbar for firefox
+  //   &::-webkit-scrollbar {
+  //     //hide scrollbar for other browsers
+  //     display: none;
+  //   }
+
+  //   span {
+  //     &:first-child {
+  //       background-color: white;
+  //       transform: rotate(44deg);
+  //     }
+  //     &:nth-child(2) {
+  //       opacity: 0;
+  //       // background-color: lightcoral;
+  //     }
+  //     &:last-child {
+  //       background-color: white;
+  //       transform: rotate(-44deg);
+  //     }
+  //   }
+  // }
+  // }
 
   &.on-about-section {
     background-color: $mainColor;
