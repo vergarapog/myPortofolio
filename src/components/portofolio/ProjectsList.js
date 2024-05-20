@@ -4,7 +4,7 @@ export const projects = [
     description:
       "I've faithfully recreated Animista.net, a popular CSS animation tool, and expanded it with features like Tailwind code generation and a draggable object. Explore the project through the link below to witness how these enhancements showcase my front-end skills and attention to detail.",
     links: {
-      website: "https://animista-clone.vercel.app/",
+      website: "https://animister.vercel.app/",
       github: "https://github.com/vergarapog/animista-clone-ts",
     },
     imgSrc: "/assets/projects/animista-clone-png.png",
