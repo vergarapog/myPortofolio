@@ -334,6 +334,11 @@
           justify-content: center;
           align-items: center;
 
+          &:hover {
+            transform: scale(1.2) !important; 
+            transition: transform 0.3s ease !important;
+          }
+
           .tech-logo {
             // background-color: $mainColor;
             // border-radius: 50%;
