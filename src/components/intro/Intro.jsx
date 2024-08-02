@@ -1,6 +1,5 @@
 import React from "react";
 import "./intro.scss";
-import { init } from "ityped";
 import { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import { SvgIcon } from "@material-ui/core";
@@ -10,7 +9,6 @@ import { useGlobalContext } from "../../context";
 
 const Intro = () => {
   const { isDarkMode } = useGlobalContext();
-  const textRef = useRef();
   const container = useRef(null);
 
   let button = useRef();
@@ -20,18 +18,6 @@ const Intro = () => {
   let titleRef = useRef();
   let nameRef = useRef();
   let jobRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: false,
-      backDelay: 2000,
-      typeSpeed: 150,
-      backSpeed: 100,
-      startDelay: 4000,
-      showCursor: true,
-      strings: ["Ambitious", "Determined", "Commited"],
-    });
-  }, []);
 
   useEffect(() => {
     lottie.loadAnimation({
@@ -161,7 +147,7 @@ const Intro = () => {
           </h1>
 
           <h3 className={`${isDarkMode && "dark-mode"}`} ref={jobRef}>
-            <span ref={textRef}></span> Front-End Developer
+            Front-End Developer
           </h3>
 
           {/* <div className="adjectives">
