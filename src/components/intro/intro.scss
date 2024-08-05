@@ -295,6 +295,12 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .bottom {
+        display: none;
+      }
+    }
+
     a.bottom {
       position: absolute;
       bottom: 2em;
