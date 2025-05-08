@@ -6,25 +6,12 @@ import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 import "./app.scss";
 import { useState } from "react";
-import { useEffect } from "react";
 import { useGlobalContext } from "./context";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  //Color scheme will be dark mode if requested by user's system
-  const { setIsDarkMode, isDarkMode } = useGlobalContext();
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setIsDarkMode(true);
-    }
-    // no dependencies to ensure this effect only runs once on load
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const { isDarkMode } = useGlobalContext();
 
   return (
     <div className={"app " + (isDarkMode && "dark-mode")}>
