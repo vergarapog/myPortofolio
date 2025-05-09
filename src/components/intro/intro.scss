@@ -24,8 +24,8 @@
     .imgContainer {
       opacity: 0;
 
-      width: 50em;
-      height: 50em;
+      width: 42em;
+      height: 42em;
       // width: 120%;
       // height: 120%;
       background-color: crimson;
@@ -42,7 +42,7 @@
         overflow: hidden;
 
         @include mobile {
-          height: 45%;
+          height: 60%;
         }
       }
 
