@@ -14,11 +14,6 @@ html {
 body {
   overflow-x: hidden;
 }
-@media (prefers-color-scheme: dark) {
-  .app {
-    background-color: $mainColor;
-  }
-}
 
 .app {
   height: 100vh;
