@@ -147,7 +147,7 @@ const Intro = () => {
           </h1>
 
           <h3 className={`${isDarkMode && "dark-mode"}`} ref={jobRef}>
-            Front-End Developer
+            Front End Developer
           </h3>
 
           {/* <div className="adjectives">
