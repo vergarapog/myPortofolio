@@ -38,24 +38,24 @@ const Contact = () => {
       </div>
       <div className={`right ${isDarkMode ? "dark-mode" : ""}`}>
         <h2>Contact.</h2>
-        <p>
-          Have a question or want to work together? Leave your details and I'll
-          get back to you as soon as possible.
-        </p>
+        <p>Have a question or want to work together?</p>
+        <p>Leave your details and I'll get back to you as soon as possible.</p>
         <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Email</label>
           <input
             type="email"
             name="from_name"
             id=""
-            placeholder="Your E-mail"
+            placeholder="Your email address"
             required
           />
+          <label htmlFor="name">Message</label>
           <textarea
-            placeholder="Your Message"
+            placeholder="What would you like to discuss?"
             name="message"
             required
           ></textarea>
-          <button type="submit">Send</button>
+          <button type="submit">Send Message</button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>
       </div>
